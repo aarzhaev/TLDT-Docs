@@ -12,6 +12,8 @@ mint dev
 
 The site configuration lives in `docs.json`. The visual language is defined in `style.css` and uses the TLDT palette: soft neutral surfaces, orange action accents, blue information accents, rounded panels, and generous spacing. The SVG logo and diagrams live in `logo/` and `images/`.
 
+Mintlify hosts a search MCP server for this site at `https://docs.tldt.me/mcp`. After deploy, readers can connect from the page contextual menu (`Connect to Cursor`, copy MCP URL, and similar). For local editors, use `.vscode/mcp.json`.
+
 ## Content rule
 
 Write for a first-time user. Describe current behavior only. If a feature depends on an owner setting, published Memory, or an integration, say so directly. Never present a draft, suggestion, simulation, or diagnostic report as a binding decision.

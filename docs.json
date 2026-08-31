@@ -70,7 +70,7 @@
     "strictlyUseCustomColor": true
   },
   "contextual": {
-    "options": ["copy", "chatgpt", "claude"]
+    "options": ["copy", "chatgpt", "claude", "mcp", "add-mcp", "cursor", "vscode"]
   },
   "footer": { "socials": {} }
 }

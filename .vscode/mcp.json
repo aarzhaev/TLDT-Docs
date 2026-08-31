@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "tldt-docs": {
+      "type": "http",
+      "url": "https://docs.tldt.me/mcp"
+    }
+  }
+}
