@@ -274,10 +274,25 @@ a.card,
   mask-image: none !important;
 }
 
+/* Base UI renders the scrollbar as a sibling of the scroll viewport. Keep the
+   thumb above the sidebar fades without lifting the navigation content. */
+#navigation-items > .z-10 {
+  z-index: 30 !important;
+}
+
 #sidebar-content > div.flex-1.p-2.relative {
   position: relative;
   overflow: hidden;
   --sidebar-fade-size: 1.25rem;
+  --sidebar-fade-scrollbar-gap: 1rem;
+  scrollbar-color: var(--tldt-canvas) transparent;
+  scrollbar-width: thin;
+}
+
+#sidebar-content > div.flex-1.p-2.relative ::-webkit-scrollbar-thumb,
+#navigation-items ::-webkit-scrollbar-thumb {
+  background-color: var(--tldt-canvas);
+  border-radius: 9999px;
 }
 
 #sidebar-content > div.flex-1.p-2.relative::before,
@@ -285,10 +300,10 @@ a.card,
   content: "";
   position: absolute;
   left: 0;
-  right: 0;
+  right: var(--sidebar-fade-scrollbar-gap);
   height: var(--sidebar-fade-size);
   pointer-events: none;
-  z-index: 25;
+  z-index: 20;
 }
 
 #sidebar-content > div.flex-1.p-2.relative::before {
@@ -300,6 +315,12 @@ a.card,
   bottom: 0;
   background: linear-gradient(to top, var(--tldt-surface), transparent);
   border-radius: 0;
+}
+
+@media (min-width: 1024px) {
+  #sidebar-content > div.flex-1.p-2.relative::before {
+    top: 4rem;
+  }
 }
 
 #navigation-items h5,
