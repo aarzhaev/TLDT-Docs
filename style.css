@@ -1,57 +1,671 @@
 :root {
-  --tldt-bg-light: #f2f2f4;
-  --tldt-panel-light: #ffffff;
-  --tldt-ink-light: #171719;
-  --tldt-muted-light: #68686f;
-  --tldt-line-light: rgba(23, 23, 25, 0.09);
-  --tldt-bg-dark: #000000;
-  --tldt-panel-dark: #171719;
-  --tldt-ink-dark: #f5f5f7;
-  --tldt-muted-dark: #a2a2aa;
-  --tldt-line-dark: rgba(255, 255, 255, 0.11);
+  --tldt-canvas: oklch(0.95 0 0);
+  --tldt-surface: oklch(1 0 0);
+  --tldt-card: #f0f0f2;
+  --tldt-foreground: oklch(0.145 0 0);
+  --tldt-muted: oklch(0.45 0 0);
+  --tldt-hover: oklch(0.9 0 0);
+  --tldt-blue: #0088ff;
   --tldt-orange: #f05a24;
-  --tldt-blue: #1687ee;
+  --tldt-radius-control: 0.625rem;
+  --tldt-radius-shell: 0.75rem;
+  --tldt-radius-card: 1rem;
+  --tldt-radius-panel: 1.5rem;
 }
 
-html, body { background: var(--tldt-bg-light) !important; }
-body { color: var(--tldt-ink-light); font-family: "Lab Grotesque", ui-sans-serif, system-ui, sans-serif; }
+html.dark {
+  --tldt-canvas: oklch(0 0 0);
+  --tldt-surface: oklch(0.17 0 0);
+  --tldt-card: oklch(0.205 0 0);
+  --tldt-foreground: oklch(0.985 0 0);
+  --tldt-muted: oklch(0.6 0 0);
+  --tldt-hover: oklch(0.25 0 0);
+  --tldt-blue: #137bf2;
+  --tldt-orange: #d44509;
+}
 
-html.dark, html.dark body { background: var(--tldt-bg-dark) !important; color: var(--tldt-ink-dark); }
+html,
+body {
+  background: var(--tldt-canvas) !important;
+}
 
-/* Keep the documentation close to TLDT's quiet, rounded product surfaces. */
-#content-container, #content-area, [data-mint-main], main { background: transparent !important; }
-#content-container { padding-bottom: 3rem !important; }
+body {
+  color: var(--tldt-foreground);
+  font-family: Geist, "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+}
 
-article, .prose { line-height: 1.7; }
-article h1, article h2, article h3, article h4 { letter-spacing: -0.035em; }
-article h1 { font-weight: 650; }
-article h2 { margin-top: 2.75rem; }
-article a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+::selection {
+  background: var(--tldt-foreground);
+  color: var(--tldt-canvas);
+}
 
-/* Mintlify cards, callouts, tables and code blocks use the same soft geometry. */
+/* Recompose Almond as the same inset shell used by the owner workspace. */
+@media (min-width: 1024px) {
+  #navbar {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    left: 16.75rem !important;
+    width: auto !important;
+    height: 3.5rem;
+    overflow: visible;
+    background: var(--tldt-surface);
+    border-radius: var(--tldt-radius-shell) var(--tldt-radius-shell) 0 0;
+  }
+
+  #navbar > div:last-child,
+  #navbar > div:last-child > div,
+  #navbar > div:last-child > div > div {
+    height: 3.5rem !important;
+  }
+
+  #navbar a[href="/"] {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 40;
+    display: flex;
+    width: 16rem;
+    height: 3.5rem;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  #navbar .nav-logo {
+    position: relative;
+    top: 2px;
+    left: auto;
+  }
+
+  .almond-layout {
+    top: 4rem !important;
+    padding: 0 0.5rem !important;
+  }
+
+  #sidebar-content {
+    top: 0.5rem !important;
+    bottom: 0.5rem !important;
+    left: 0.5rem !important;
+    width: 16rem !important;
+    height: auto !important;
+    padding-left: 0 !important;
+  }
+
+  #content-container {
+    margin-left: 16.25rem !important;
+  }
+
+  #content-container::before,
+  #content-container::after {
+    position: fixed;
+    right: 0.5rem;
+    left: 16.75rem;
+    z-index: 30;
+    height: 1.25rem;
+    content: "";
+    pointer-events: none;
+  }
+
+  #content-container::before {
+    top: 4rem;
+    background: linear-gradient(to bottom, var(--tldt-surface), transparent);
+  }
+
+  #content-container::after {
+    bottom: 0.5rem;
+    background: linear-gradient(to top, var(--tldt-surface), transparent);
+    border-radius: 0 0 var(--tldt-radius-shell) var(--tldt-radius-shell);
+  }
+}
+
+#content-container {
+  background: var(--tldt-surface) !important;
+  border: 0 !important;
+  border-radius: var(--tldt-radius-shell) !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 3rem !important;
+}
+
+@media (min-width: 1024px) {
+  #content-container {
+    border-radius: 0 0 var(--tldt-radius-shell) var(--tldt-radius-shell) !important;
+    padding-top: 1.5rem !important;
+  }
+}
+
+#content-area,
+[data-mint-main],
+main {
+  background: transparent !important;
+}
+
+/* Sidebar rhythm mirrors the owner workspace: quiet labels and blue selection. */
+#sidebar-content {
+  background: var(--tldt-surface);
+  overflow: hidden;
+  border-radius: var(--tldt-radius-shell);
+  color: color-mix(in srgb, var(--tldt-foreground) 70%, transparent);
+}
+
+#sidebar-content > div:first-child {
+  padding: 3.5rem 0 0 !important;
+}
+
+#sidebar-content .almond-nav-bottom-section {
+  padding-inline: 0.5rem !important;
+}
+
+.almond-nav-bottom-section-divider {
+  background: color-mix(in srgb, var(--tldt-foreground) 4%, transparent) !important;
+}
+
+#sidebar-content .almond-nav-bottom-section button[aria-label="Toggle dark mode"] {
+  border-color: color-mix(in srgb, var(--tldt-foreground) 4%, transparent) !important;
+}
+
+#sidebar-content .almond-nav-bottom-section button[aria-label="Toggle dark mode"]:hover {
+  border-color: color-mix(in srgb, var(--tldt-foreground) 6%, transparent) !important;
+}
+
+html.dark #sidebar-content .almond-nav-bottom-section button[aria-label="Toggle dark mode"] > div.absolute.rounded-full {
+  background: color-mix(in srgb, var(--tldt-foreground) 14%, var(--tldt-canvas)) !important;
+}
+
+.card-group {
+  gap: 0.5rem !important;
+  row-gap: 0.5rem !important;
+  column-gap: 0.5rem !important;
+}
+
+.card-group > * {
+  margin: 0 !important;
+}
+
+#pagination {
+  gap: 0.5rem !important;
+  row-gap: 0.5rem !important;
+  column-gap: 0.5rem !important;
+}
+
+.card-group .card,
+a.card,
+[data-mint-component="Card"] {
+  margin: 0 !important;
+}
+
+#pagination > * {
+  margin: 0 !important;
+}
+
+#pagination a {
+  margin-block: 0 !important;
+  border: 0 !important;
+  background: transparent;
+  transition: color 300ms ease, background-color 300ms ease, transform 300ms ease !important;
+}
+
+@media (min-width: 1024px) {
+  #navigation-items {
+    top: 4rem !important;
+    padding-top: 2.5rem !important;
+  }
+}
+
+#navigation-items {
+  padding-bottom: 1rem !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+#sidebar-content > div.flex-1.p-2.relative {
+  position: relative;
+  overflow: hidden;
+  --sidebar-fade-size: 1.25rem;
+}
+
+#sidebar-content > div.flex-1.p-2.relative::before,
+#sidebar-content > div.flex-1.p-2.relative::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: var(--sidebar-fade-size);
+  pointer-events: none;
+  z-index: 25;
+}
+
+#sidebar-content > div.flex-1.p-2.relative::before {
+  top: 2.75rem;
+  background: linear-gradient(to bottom, var(--tldt-surface), transparent);
+}
+
+#sidebar-content > div.flex-1.p-2.relative::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--tldt-surface), transparent);
+  border-radius: 0;
+}
+
+#navigation-items h5,
+.sidebar-group-header,
+.sidebar-group-header h5 {
+  color: color-mix(in srgb, var(--tldt-foreground) 48%, transparent) !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+.sidebar-group-header .sidebar-group-icon {
+  display: none !important;
+}
+
+.sidebar-group-header {
+  gap: 0 !important;
+}
+
+#navigation-items .sidebar-group {
+  margin-top: 0.4rem;
+}
+
+#navigation-items .sidebar-group a {
+  align-items: flex-start !important;
+  overflow: visible !important;
+  min-height: 2.25rem;
+  padding-block: 0.5rem !important;
+  border-radius: var(--tldt-radius-control) !important;
+  color: color-mix(in srgb, var(--tldt-foreground) 68%, transparent);
+  transition: color 300ms ease, background-color 300ms ease !important;
+}
+
+#navigation-items .sidebar-group a > div:first-child {
+  min-width: 0;
+  overflow: visible !important;
+}
+
+#navigation-items .sidebar-group a svg {
+  width: 0.75rem !important;
+  height: 0.75rem !important;
+  margin-top: 0.2rem;
+  flex: 0 0 auto;
+  overflow: visible !important;
+  background-color: currentColor !important;
+  -webkit-mask-size: contain !important;
+  mask-size: contain !important;
+}
+
+#navigation-items .sidebar-group a:hover {
+  background: color-mix(in srgb, var(--tldt-foreground) 7%, transparent) !important;
+  color: var(--tldt-foreground) !important;
+}
+
+#navigation-items .sidebar-group a:hover svg {
+  background-color: currentColor !important;
+}
+
+#navigation-items .sidebar-group a[class*="bg-primary"] {
+  background: color-mix(in srgb, var(--tldt-blue) 15%, transparent) !important;
+  color: var(--tldt-blue) !important;
+  text-shadow: none !important;
+}
+
+#navigation-items .sidebar-group a[class*="bg-primary"] svg {
+  background-color: currentColor !important;
+}
+
+html.dark #navigation-items .sidebar-group a[class*="bg-primary"] {
+  background: color-mix(in srgb, var(--tldt-foreground) 10%, transparent) !important;
+  color: color-mix(in srgb, var(--tldt-foreground) 92%, transparent) !important;
+}
+
+html.dark #navigation-items .sidebar-group a[class*="bg-primary"] svg {
+  background-color: currentColor !important;
+}
+
+#search-bar-entry {
+  width: 100% !important;
+  height: 2.25rem !important;
+  background: var(--tldt-canvas) !important;
+  border: 0 !important;
+  border-radius: var(--tldt-radius-shell) !important;
+  box-shadow: none !important;
+  filter: none !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+  transition: color 300ms ease, background-color 300ms ease !important;
+}
+
+/* Header controls live on the content surface and use quiet product states. */
+@media (min-width: 1024px) {
+  #navbar > div:last-child > div > div.flex.items-center {
+    height: 3.5rem !important;
+    margin-inline: 0 !important;
+    padding-inline: 1rem !important;
+  }
+
+  #navbar > div:last-child > div > div.flex.items-center > div:first-child {
+    padding-inline: 0 !important;
+  }
+
+  #navbar nav ul {
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Mintlify leaves internal navbar links as plain text; match external .navbar-link chips. */
+#navbar nav ul > li.list-none,
+#navbar .navbar-link,
+#navbar #topbar-cta-button > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 2rem;
+  padding: 0.375rem 0.625rem !important;
+  border: 0 !important;
+  border-radius: var(--tldt-radius-shell) !important;
+  background: transparent !important;
+  color: color-mix(in srgb, var(--tldt-foreground) 70%, transparent) !important;
+  box-shadow: none !important;
+  list-style: none !important;
+  transition: color 300ms ease, background-color 300ms ease !important;
+}
+
+#navbar nav ul > li.list-none > a,
+#navbar .navbar-link > a {
+  color: inherit !important;
+}
+
+#navbar nav ul > li.list-none:hover,
+#navbar .navbar-link:hover,
+#navbar #topbar-cta-button > a:hover {
+  background: color-mix(in srgb, var(--tldt-foreground) 7%, transparent) !important;
+  color: var(--tldt-foreground) !important;
+  opacity: 1 !important;
+}
+
+#navbar #topbar-cta-button span {
+  color: inherit !important;
+}
+
+#search-bar-entry:hover {
+  background: color-mix(in srgb, var(--tldt-foreground) 5%, var(--tldt-canvas)) !important;
+  color: var(--tldt-foreground) !important;
+  filter: none !important;
+}
+
+#page-context-menu button {
+  background: var(--tldt-canvas) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+  transition: color 300ms ease, background-color 300ms ease !important;
+}
+
+#page-context-menu button:hover {
+  background: color-mix(in srgb, var(--tldt-foreground) 5%, var(--tldt-canvas)) !important;
+  color: var(--tldt-foreground) !important;
+}
+
+html.dark [data-radix-menu-content][role="menu"] {
+  background: var(--tldt-canvas) !important;
+}
+
+/* Type follows TLDT's compact headings and relaxed reading copy. */
+article,
+.prose {
+  color: color-mix(in srgb, var(--tldt-foreground) 78%, transparent);
+  line-height: 1.7;
+}
+
+#page-title,
+article h1,
+article h2,
+article h3,
+article h4 {
+  color: var(--tldt-foreground) !important;
+  letter-spacing: -0.025em;
+}
+
+#page-title {
+  font-weight: 650 !important;
+}
+
+article h2 {
+  margin-top: 2.75rem;
+}
+
+article a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* Product surfaces are defined by tone and spacing, not visible outlines. */
+.card,
 [data-mint-component="Card"],
-[data-mint-component="CardGroup"],
 article table,
 article pre,
 article blockquote,
 article img,
-article figure {
-  border-radius: 1.25rem !important;
+article figure,
+[role="tabpanel"] {
+  border: 0 !important;
+  border-radius: var(--tldt-radius-card) !important;
+  box-shadow: none !important;
 }
 
-article table { overflow: hidden; border: 1px solid var(--tldt-line-light); background: var(--tldt-panel-light); }
-article pre { border: 1px solid var(--tldt-line-light); }
-article blockquote { border-left-color: var(--tldt-orange) !important; background: color-mix(in srgb, var(--tldt-orange) 7%, transparent); }
+[data-component-part="tab-content"] {
+  min-height: 4.5rem;
+  padding: 1rem 1.25rem !important;
+}
 
-html.dark article table, html.dark article pre { border-color: var(--tldt-line-dark); background: var(--tldt-panel-dark); }
-html.dark article blockquote { background: color-mix(in srgb, var(--tldt-orange) 12%, transparent); }
+.card,
+[data-mint-component="Card"],
+[role="tabpanel"] {
+  background: var(--tldt-card) !important;
+  transition: color 300ms ease, background-color 300ms ease, transform 300ms ease !important;
+}
 
-/* Orange is for action; blue is reserved for information and verification. */
-[data-mint-component="Card"]:hover { border-color: color-mix(in srgb, var(--tldt-orange) 35%, transparent) !important; }
-article img { box-shadow: 0 18px 50px rgba(23, 23, 25, 0.08); }
-html.dark article img { box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35); }
+.card:hover,
+[data-mint-component="Card"]:hover {
+  background: var(--tldt-hover) !important;
+  border-color: transparent !important;
+}
+
+.card:active,
+[data-mint-component="Card"]:active {
+  transform: scale(0.99);
+}
+
+.card [data-component-part="card-icon"],
+[data-mint-component="Card"] [data-component-part="card-icon"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  overflow: visible !important;
+  flex-shrink: 0;
+  fill: currentColor !important;
+  color: color-mix(in srgb, var(--tldt-foreground) 68%, transparent) !important;
+}
+
+.card [data-component-part="card-icon"] svg,
+[data-mint-component="Card"] [data-component-part="card-icon"] svg {
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  overflow: visible !important;
+  background-color: currentColor !important;
+  -webkit-mask-size: 100% 100% !important;
+  mask-size: 100% 100% !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  -webkit-mask-position: center center !important;
+  mask-position: center center !important;
+}
+
+.card:hover [data-component-part="card-icon"],
+[data-mint-component="Card"]:hover [data-component-part="card-icon"] {
+  color: var(--tldt-foreground) !important;
+}
+
+.card:hover [data-component-part="card-icon"] svg,
+[data-mint-component="Card"]:hover [data-component-part="card-icon"] svg {
+  background-color: currentColor !important;
+}
+
+article table,
+article pre {
+  overflow: hidden;
+  background: var(--tldt-card) !important;
+}
+
+article blockquote {
+  background: color-mix(in srgb, var(--tldt-orange) 9%, transparent) !important;
+  border-left: 3px solid var(--tldt-orange) !important;
+}
+
+article .callout {
+  border: 0 !important;
+}
+
+.accordion-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  margin-block: 0.75rem !important;
+  border: 0 !important;
+  border-radius: var(--tldt-radius-card) !important;
+  background: var(--tldt-canvas) !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+.accordion-group::before,
+.accordion-group::after {
+  content: none !important;
+}
+
+.accordion-group > details.accordion {
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.accordion-group > details.accordion > summary {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 1rem !important;
+  background: transparent !important;
+  transition: color 300ms ease, background-color 300ms ease !important;
+}
+
+.accordion-group > details.accordion > summary [data-component-part="accordion-caret-right"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: center !important;
+  margin: 0 !important;
+  flex-shrink: 0;
+}
+
+.accordion-group > details.accordion > summary [data-component-part="accordion-title-container"] {
+  margin: 0 !important;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.accordion-group > details.accordion[open] > summary {
+  border-radius: 0 !important;
+}
+
+.accordion-group > details.accordion > summary:hover {
+  background: color-mix(in srgb, var(--tldt-foreground) 5%, var(--tldt-canvas)) !important;
+}
+
+.accordion-group [data-component-part="accordion-content"] {
+  margin: 0 1rem 1rem !important;
+  padding-left: calc(0.75rem + 0.5rem) !important;
+}
+
+.accordion-group [data-component-part="accordion-content"] > :first-child {
+  margin-top: 0 !important;
+}
+
+.accordion-group > details.accordion + details.accordion {
+  border-top: 0 !important;
+}
+
+article img {
+  background: var(--tldt-card);
+}
+
+article .frame,
+article figure,
+article [data-component-part="frame"] {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+
+#pagination a:hover {
+  background: var(--tldt-hover);
+}
+
+button,
+a {
+  transition-duration: 300ms;
+}
+
+button:active,
+a[role="button"]:active {
+  transform: scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  #navigation-items,
+  #sidebar-content > div.flex-1.p-2.relative::before,
+  #sidebar-content > div.flex-1.p-2.relative::after {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+
+  #sidebar-content > div.flex-1.p-2.relative::before,
+  #sidebar-content > div.flex-1.p-2.relative::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #content-container {
+    border-radius: var(--tldt-radius-shell) !important;
+  }
+}
 
 @media (max-width: 640px) {
-  #content-container { padding-left: 1rem !important; padding-right: 1rem !important; }
-  article h1 { font-size: 2.25rem !important; }
+  #content-container {
+    padding-inline: 1rem !important;
+  }
+
+  #page-title,
+  article h1 {
+    font-size: 2.25rem !important;
+  }
 }

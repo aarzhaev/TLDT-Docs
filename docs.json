@@ -3,9 +3,9 @@
   "theme": "almond",
   "name": "TLDT",
   "colors": {
-    "primary": "#d44509",
-    "light": "#ffffff",
-    "dark": "#707070"
+    "primary": "#0069c5",
+    "light": "#0088ff",
+    "dark": "#137bf2"
   },
   "favicon": "/favicon.svg",
   "logo": {
@@ -13,67 +13,56 @@
     "dark": "/logo/tldt-dark.svg"
   },
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Start here",
-            "icon": "rocket",
-            "pages": ["overview", "quickstart", "how-tldt-works", "faq"]
-          },
-          {
-            "group": "Memory",
-            "icon": "brain",
-            "pages": [
-              "memory/overview",
-              "memory/import-guide",
-              "memory/drafts-and-documents",
-              "memory/generate-derived",
-              "memory/publish"
-            ]
-          },
-          {
-            "group": "Public profile",
-            "icon": "globe",
-            "pages": [
-              "public-profile/overview",
-              "public-profile/chat",
-              "public-profile/fast-check"
-            ]
-          },
-          {
-            "group": "Owner review",
-            "icon": "clipboard-check",
-            "pages": [
-              "owner-review/preview",
-              "owner-review/simulate",
-              "owner-review/sessions"
-            ]
-          },
-          {
-            "group": "Settings and sharing",
-            "icon": "settings",
-            "pages": [
-              "settings/public-link",
-              "settings/integrations",
-              "sharing",
-              "account"
-            ]
-          }
+        "group": "Start here",
+        "pages": ["overview", "quickstart", "how-tldt-works", "faq"]
+      },
+      {
+        "group": "Memory",
+        "pages": [
+          "memory/overview",
+          "memory/import-guide",
+          "memory/drafts-and-documents",
+          "memory/generate-derived",
+          "memory/publish"
+        ]
+      },
+      {
+        "group": "Public profile",
+        "pages": [
+          "public-profile/overview",
+          "public-profile/chat",
+          "public-profile/fast-check"
+        ]
+      },
+      {
+        "group": "Owner review",
+        "pages": [
+          "owner-review/preview",
+          "owner-review/simulate",
+          "owner-review/sessions"
+        ]
+      },
+      {
+        "group": "Settings and sharing",
+        "pages": [
+          "settings/public-link",
+          "settings/integrations",
+          "sharing",
+          "account"
         ]
       }
     ]
   },
   "navbar": {
     "links": [
-      { "label": "Open TLDT", "href": "https://tldt.me" },
-      { "label": "Support", "href": "mailto:support@tldt.me" }
+      { "label": "Open TLDT", "href": "https://tldt.me" }
     ],
     "primary": {
       "type": "button",
-      "label": "Go to TLDT",
-      "href": "https://tldt.me"
+      "label": "Login",
+      "href": "https://tldt.me/login"
     }
   },
   "appearance": {
