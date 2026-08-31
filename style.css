@@ -341,8 +341,9 @@ a.card,
 #navigation-items .sidebar-group a svg {
   width: 0.75rem !important;
   height: 0.75rem !important;
-  margin-top: 0.075rem;
+  margin-top: 0.2rem;
   flex: 0 0 auto;
+  align-self: flex-start;
   overflow: visible !important;
   background-color: currentColor !important;
   -webkit-mask-size: 100% 100% !important;
@@ -382,6 +383,8 @@ html.dark #navigation-items .sidebar-group a[class*="bg-primary"] svg {
 }
 
 #search-bar-entry {
+  position: relative;
+  z-index: 30;
   width: 100% !important;
   height: 2.25rem !important;
   background: var(--tldt-canvas) !important;
@@ -392,6 +395,10 @@ html.dark #navigation-items .sidebar-group a[class*="bg-primary"] svg {
   --tw-ring-shadow: 0 0 #0000 !important;
   --tw-ring-offset-shadow: 0 0 #0000 !important;
   transition: color 300ms ease, background-color 300ms ease !important;
+}
+
+#sidebar-content div:has(> #search-bar-entry) {
+  z-index: 30 !important;
 }
 
 /* Header controls live on the content surface and use quiet product states. */
@@ -450,6 +457,18 @@ html.dark #navigation-items .sidebar-group a[class*="bg-primary"] svg {
   background: color-mix(in srgb, var(--tldt-foreground) 5%, var(--tldt-canvas)) !important;
   color: var(--tldt-foreground) !important;
   filter: none !important;
+}
+
+html.dark #headlessui-portal-root [id^="headlessui-dialog-panel"] > div.h-14,
+html.dark #headlessui-portal-root [id^="headlessui-dialog-panel"] > div.h-14 > div.rounded-xl {
+  background: var(--tldt-canvas) !important;
+  border: 0 !important;
+  border-color: transparent !important;
+  border-radius: var(--tldt-radius-shell) !important;
+  box-shadow: none !important;
+  filter: none !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
 }
 
 #page-context-menu button {
