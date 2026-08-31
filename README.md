@@ -4,11 +4,16 @@ Mintlify documentation for TLDT, the candidate-owned AI career profile for recru
 
 ## Local preview
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) and run:
+Install the pinned Mintlify CLI and run:
 
 ```bash
-mint dev
+npm install
+npm run dev
 ```
+
+The checked-in CLI version keeps local preview markup and styles aligned with
+the hosted Mintlify runtime. Update the pin deliberately and verify both themes
+before committing a runtime upgrade.
 
 The site configuration lives in `docs.json`. The visual language is defined in `style.css` and uses the TLDT palette: soft neutral surfaces, orange action accents, blue information accents, rounded panels, and generous spacing. The SVG logo and diagrams live in `logo/` and `images/`.
 

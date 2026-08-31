@@ -118,7 +118,13 @@ html.dark #navbar a:has(> img.nav-logo)::before {
 
   .almond-layout {
     top: 4rem !important;
+    bottom: 0.5rem !important;
+    height: auto !important;
     padding: 0 0.5rem !important;
+  }
+
+  .almond-layout > div:has(> #content-container) {
+    height: 100% !important;
   }
 
   #sidebar-content {
@@ -274,7 +280,7 @@ a.card,
 }
 
 #sidebar-content > div.flex-1.p-2.relative::before {
-  top: 2.75rem;
+  top: 2rem;
   background: linear-gradient(to bottom, var(--tldt-surface), transparent);
 }
 
@@ -449,7 +455,8 @@ html.dark #navigation-items .sidebar-group a[class*="bg-primary"] svg {
   color: var(--tldt-foreground) !important;
 }
 
-html.dark [data-radix-menu-content][role="menu"] {
+/* Mintlify 4.2.8xx moved contextual menus from Radix to Base UI. */
+html.dark [role="menu"] {
   background: var(--tldt-canvas) !important;
 }
 
@@ -643,8 +650,30 @@ article .callout {
   margin-top: 0 !important;
 }
 
-.accordion-group > details.accordion + details.accordion {
+#content-container .accordion-group > details.accordion,
+#content-container .accordion-group > details.accordion + details.accordion {
+  position: relative;
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
   border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-block: 0 !important;
+  border-block-color: transparent !important;
+  border-color: transparent !important;
+}
+
+/* Cover Mintlify's forced `divide-y!` rule, whose important logical border is
+   emitted after custom CSS in the hosted runtime. */
+#content-container .accordion-group > details.accordion:not(:last-child)::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  z-index: 2;
+  height: 2px;
+  background: var(--tldt-canvas);
+  content: "";
+  pointer-events: none;
 }
 
 article img {
