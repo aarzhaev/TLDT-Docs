@@ -34,6 +34,52 @@ body {
   font-family: Geist, "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
 }
 
+#navbar a:has(> img.nav-logo) {
+  display: inline-flex;
+  align-items: center;
+  color: color-mix(in srgb, var(--tldt-foreground) 35%, transparent);
+  transition: color 300ms ease;
+}
+
+#navbar a:has(> img.nav-logo):hover {
+  color: var(--tldt-foreground);
+}
+
+html.dark #navbar a:has(> img.nav-logo) {
+  color: color-mix(in srgb, var(--tldt-foreground) 25%, transparent);
+}
+
+html.dark #navbar a:has(> img.nav-logo):hover {
+  color: var(--tldt-foreground);
+}
+
+#navbar a:has(> img.nav-logo) img.nav-logo {
+  display: none !important;
+}
+
+#navbar a:has(> img.nav-logo)::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  height: 2rem;
+  width: calc(2rem * 232 / 43);
+  background-color: currentColor;
+  -webkit-mask-image: url("/logo/tldt-light.svg");
+  mask-image: url("/logo/tldt-light.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: left center;
+  mask-position: left center;
+  transition: background-color 300ms ease;
+}
+
+html.dark #navbar a:has(> img.nav-logo)::before {
+  -webkit-mask-image: url("/logo/tldt-dark.svg");
+  mask-image: url("/logo/tldt-dark.svg");
+}
+
 ::selection {
   background: var(--tldt-foreground);
   color: var(--tldt-canvas);
@@ -67,13 +113,7 @@ body {
     width: 16rem;
     height: 3.5rem;
     align-items: center;
-    padding: 1rem;
-  }
-
-  #navbar .nav-logo {
-    position: relative;
-    top: 2px;
-    left: auto;
+    padding: 0.75rem 1rem;
   }
 
   .almond-layout {
@@ -287,8 +327,12 @@ a.card,
   flex: 0 0 auto;
   overflow: visible !important;
   background-color: currentColor !important;
-  -webkit-mask-size: contain !important;
-  mask-size: contain !important;
+  -webkit-mask-size: 100% 100% !important;
+  mask-size: 100% 100% !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  -webkit-mask-position: center center !important;
+  mask-position: center center !important;
 }
 
 #navigation-items .sidebar-group a:hover {
