@@ -254,6 +254,18 @@ a.card,
     top: 4rem !important;
     padding-top: 2.5rem !important;
   }
+
+  #navigation-items:has(> .size-full:first-child) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Mintlify's Base UI runtime adds a dedicated scroll viewport. Keep the
+     visible rhythm from the legacy local preview without double padding. */
+  #navigation-items > .size-full:first-child {
+    padding-top: 2.5rem !important;
+    padding-bottom: 1rem !important;
+  }
 }
 
 #navigation-items {
@@ -280,7 +292,7 @@ a.card,
 }
 
 #sidebar-content > div.flex-1.p-2.relative::before {
-  top: 2rem;
+  top: 5.25rem;
   background: linear-gradient(to bottom, var(--tldt-surface), transparent);
 }
 
@@ -329,7 +341,7 @@ a.card,
 #navigation-items .sidebar-group a svg {
   width: 0.75rem !important;
   height: 0.75rem !important;
-  margin-top: 0.2rem;
+  margin-top: 0.075rem;
   flex: 0 0 auto;
   overflow: visible !important;
   background-color: currentColor !important;
