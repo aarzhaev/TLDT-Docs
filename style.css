@@ -1,0 +1,57 @@
+:root {
+  --tldt-bg-light: #f2f2f4;
+  --tldt-panel-light: #ffffff;
+  --tldt-ink-light: #171719;
+  --tldt-muted-light: #68686f;
+  --tldt-line-light: rgba(23, 23, 25, 0.09);
+  --tldt-bg-dark: #000000;
+  --tldt-panel-dark: #171719;
+  --tldt-ink-dark: #f5f5f7;
+  --tldt-muted-dark: #a2a2aa;
+  --tldt-line-dark: rgba(255, 255, 255, 0.11);
+  --tldt-orange: #f05a24;
+  --tldt-blue: #1687ee;
+}
+
+html, body { background: var(--tldt-bg-light) !important; }
+body { color: var(--tldt-ink-light); font-family: "Lab Grotesque", ui-sans-serif, system-ui, sans-serif; }
+
+html.dark, html.dark body { background: var(--tldt-bg-dark) !important; color: var(--tldt-ink-dark); }
+
+/* Keep the documentation close to TLDT's quiet, rounded product surfaces. */
+#content-container, #content-area, [data-mint-main], main { background: transparent !important; }
+#content-container { padding-bottom: 3rem !important; }
+
+article, .prose { line-height: 1.7; }
+article h1, article h2, article h3, article h4 { letter-spacing: -0.035em; }
+article h1 { font-weight: 650; }
+article h2 { margin-top: 2.75rem; }
+article a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+/* Mintlify cards, callouts, tables and code blocks use the same soft geometry. */
+[data-mint-component="Card"],
+[data-mint-component="CardGroup"],
+article table,
+article pre,
+article blockquote,
+article img,
+article figure {
+  border-radius: 1.25rem !important;
+}
+
+article table { overflow: hidden; border: 1px solid var(--tldt-line-light); background: var(--tldt-panel-light); }
+article pre { border: 1px solid var(--tldt-line-light); }
+article blockquote { border-left-color: var(--tldt-orange) !important; background: color-mix(in srgb, var(--tldt-orange) 7%, transparent); }
+
+html.dark article table, html.dark article pre { border-color: var(--tldt-line-dark); background: var(--tldt-panel-dark); }
+html.dark article blockquote { background: color-mix(in srgb, var(--tldt-orange) 12%, transparent); }
+
+/* Orange is for action; blue is reserved for information and verification. */
+[data-mint-component="Card"]:hover { border-color: color-mix(in srgb, var(--tldt-orange) 35%, transparent) !important; }
+article img { box-shadow: 0 18px 50px rgba(23, 23, 25, 0.08); }
+html.dark article img { box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35); }
+
+@media (max-width: 640px) {
+  #content-container { padding-left: 1rem !important; padding-right: 1rem !important; }
+  article h1 { font-size: 2.25rem !important; }
+}

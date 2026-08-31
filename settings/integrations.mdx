@@ -1,0 +1,35 @@
+---
+title: "Integrations and models"
+description: "Understand the optional services behind generation, research, scheduling, speech input, and notifications."
+---
+
+Integrations extend TLDT, but they do not change who owns the data or which Memory is public. Credentials are stored and used server-side; they are not shown in the owner UI, prompts, transcripts, or public responses.
+
+## OpenRouter
+
+OpenRouter provides LLM generation for Chat, Fast Check, Simulate, Properties analysis, and Derived generation.
+
+- **Platform mode** uses the hosted TLDT Lite model.
+- **BYOK mode** uses the OpenRouter key and saved model list connected to your Profile.
+- BYOK does not silently fall back to the platform key when its credentials are missing.
+- Public visitors see only models you mark visible.
+
+## Firecrawl and Perplexity
+
+These providers support bounded vacancy extraction and public research when the flow allows it. Research is context, not proof of your history. Unsafe URLs are rejected, and provider failure reduces available context instead of creating a fact.
+
+## Cal.com
+
+Cal.com enables an optional meeting flow. TLDT can offer a booking form only after the conversation has a concrete purpose and the visitor gives explicit consent. Availability, the exact slot, and a second policy review happen before booking.
+
+TLDT cannot promise that you will attend, accept a role, or be available at a time outside the visible booking flow.
+
+## Soniox
+
+Speech-to-text turns a short recording into editable text. The text returns to the composer and is never sent automatically. TLDT does not provide a real-time voice agent.
+
+## Loops and Telegram
+
+Loops delivers hosted authentication email and can sync the owner audience. Telegram can deliver access-request or owner escalation notifications when configured. These integrations are optional and do not expose secrets in the product.
+
+<Warning>If an integration is missing or fails, TLDT fails closed for the action that needs it. It does not switch to another Profile or reveal provider details.</Warning>

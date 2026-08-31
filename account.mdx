@@ -1,0 +1,26 @@
+---
+title: "Account and privacy"
+description: "Sign in securely, understand ownership, export what is available, and delete your account carefully."
+---
+
+## Sign in
+
+Use email Magic Link/OTP or Google on the TLDT sign-in page. A successful sign-in provisions your owner Profile and lets you claim one public username.
+
+Owner pages under `/admin` are private. A public username page and an active share link are public to anyone who opens them.
+
+## Ownership boundary
+
+One authenticated user owns one Profile. Memory, drafts, published versions, sessions, integrations, shares, and lifecycle actions stay inside that Profile. Public visitors can use only the published projection for the username they opened.
+
+## Export and deletion
+
+Owner export and account deletion are protected lifecycle actions. Account deletion immediately unpublishes the Profile, revokes active shares, and schedules cleanup of Profile-bound data.
+
+The current maintenance flow can clean up Storage objects, but a downloadable export archive and complete Auth/database deletion may require the hosted lifecycle worker to finish. Treat the owner UI status as the current state, not as proof that every background job has already completed.
+
+<Warning>Before deletion, download or copy any information you need and verify the exact account target. Deletion is separate from hiding the public link and from revoking a single share.</Warning>
+
+## Privacy in practice
+
+TLDT keeps Private Memory, draft workspaces, prompts, source paths, internal citations, provider metadata, policy reasons, and tool traces out of public serialization. Important job or personal decisions should still be confirmed directly with the owner.

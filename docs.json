@@ -1,0 +1,87 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "TLDT",
+  "colors": {
+    "primary": "#d44509",
+    "light": "#ffffff",
+    "dark": "#707070"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/tldt-light.svg",
+    "dark": "/logo/tldt-dark.svg"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Start here",
+            "icon": "rocket",
+            "pages": ["overview", "quickstart", "how-tldt-works", "faq"]
+          },
+          {
+            "group": "Memory",
+            "icon": "brain",
+            "pages": [
+              "memory/overview",
+              "memory/import-guide",
+              "memory/drafts-and-documents",
+              "memory/generate-derived",
+              "memory/publish"
+            ]
+          },
+          {
+            "group": "Public profile",
+            "icon": "globe",
+            "pages": [
+              "public-profile/overview",
+              "public-profile/chat",
+              "public-profile/fast-check"
+            ]
+          },
+          {
+            "group": "Owner review",
+            "icon": "clipboard-check",
+            "pages": [
+              "owner-review/preview",
+              "owner-review/simulate",
+              "owner-review/sessions"
+            ]
+          },
+          {
+            "group": "Settings and sharing",
+            "icon": "settings",
+            "pages": [
+              "settings/public-link",
+              "settings/integrations",
+              "sharing",
+              "account"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      { "label": "Open TLDT", "href": "https://tldt.me" },
+      { "label": "Support", "href": "mailto:support@tldt.me" }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Go to TLDT",
+      "href": "https://tldt.me"
+    }
+  },
+  "appearance": {
+    "default": "system",
+    "strictlyUseCustomColor": true
+  },
+  "contextual": {
+    "options": ["copy", "chatgpt", "claude"]
+  },
+  "footer": { "socials": {} }
+}

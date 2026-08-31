@@ -1,0 +1,39 @@
+---
+title: "Preview and publish Memory"
+description: "Move reviewed documents into an immutable public version and activate it when you are ready."
+---
+
+Publishing is the moment when a selected draft becomes a version that the public runtime can use. The process is explicit so you can see what will go live.
+
+## Preview first
+
+Open the publication panel from **Memory**. The preview shows:
+
+- the next version name;
+- the exact Raw and Derived files included;
+- the generated Memory indexes;
+- warnings about sensitive Public files;
+- changes compared with the previous version;
+- the draft and Profile revisions used for the preview.
+
+Read the preview like a release checklist. A Public file can be eligible without being the right file for this version.
+
+## Publish and activate
+
+<Steps>
+  <Step title="Resolve warnings">
+    Review missing Properties, duplicate special roles, and High/Restricted sensitivity warnings. Make an explicit decision for sensitive content.
+  </Step>
+  <Step title="Confirm publication">
+    TLDT rechecks that the draft and its revisions have not changed while you were reviewing. The selected content is stored as an immutable version.
+  </Step>
+  <Step title="Activate when ready">
+    Activation moves the public runtime pointer to that version. Until activation, the previous live version remains active.
+  </Step>
+</Steps>
+
+## Versions are independent
+
+Changing a draft after publication does not change the published version. To update the profile, edit the draft, preview a new version, publish it, and activate it. To roll back, activate an older immutable version.
+
+<Warning>Do not treat a successful draft save as a public release. The public profile reads only the active published version, never a draft fallback.</Warning>
