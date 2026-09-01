@@ -19,7 +19,15 @@
         "pages": ["overview", "quickstart", "how-tldt-works", "faq"]
       },
       {
-        "group": "Memory",
+        "group": "Prepare for a role",
+        "pages": [
+          "public-profile/fast-check",
+          "owner-review/simulate",
+          "owner-review/preview"
+        ]
+      },
+      {
+        "group": "Career Memory",
         "pages": [
           "memory/overview",
           "memory/import-guide",
@@ -29,27 +37,19 @@
         ]
       },
       {
-        "group": "Public profile",
+        "group": "Represent and share",
         "pages": [
           "public-profile/overview",
           "public-profile/chat",
-          "public-profile/fast-check"
-        ]
-      },
-      {
-        "group": "Owner review",
-        "pages": [
-          "owner-review/preview",
-          "owner-review/simulate",
-          "owner-review/sessions"
-        ]
-      },
-      {
-        "group": "Settings and sharing",
-        "pages": [
-          "settings/public-link",
-          "settings/integrations",
+          "owner-review/sessions",
           "sharing",
+          "settings/public-link"
+        ]
+      },
+      {
+        "group": "Settings and privacy",
+        "pages": [
+          "settings/integrations",
           "account"
         ]
       }
@@ -72,5 +72,8 @@
   "contextual": {
     "options": ["copy", "chatgpt", "claude", "mcp", "cursor", "vscode"]
   },
-  "footer": { "socials": {} }
+  "footer": {
+    "socials": {}
+  },
+  "description": "Learn how to use owner-controlled Career Memory for role fit, interview preparation, and selective AI representation."
 }

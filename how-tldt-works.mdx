@@ -1,31 +1,65 @@
 ---
 title: "How TLDT works"
-description: "Understand the boundary between your evidence, published Memory, and the public conversation."
+description: "See how one reviewed Career Memory powers role fit, interview preparation, and optional public representation."
 icon: "circle-info"
 ---
 
-TLDT uses a simple publication boundary: you provide evidence, you review the context, and visitors can use only the published version.
+TLDT uses one reviewed Career Memory across private preparation and optional public representation. The owner controls the publication boundary; every workflow reads an immutable version rather than a live draft.
 
-<Frame caption="Memory moves through an explicit review boundary"><img src="/images/memory-flow.svg" alt="Raw evidence flows into reviewed Derived Memory and then into a published runtime version" /></Frame>
+## The product sequence
 
-## The three layers
+<Steps>
+  <Step title="Start from owner-supplied evidence">
+    Add CVs, notes, transcripts, project records, and other material you own and can review.
+  </Step>
+  <Step title="Publish a reviewed Memory version">
+    Choose which documents are Public, resolve warnings, publish an immutable version, and activate it.
+  </Step>
+  <Step title="Check a real role">
+    Fast Check compares one vacancy with published evidence and distinguishes a real gap from missing stored proof.
+  </Step>
+  <Step title="Rehearse or test representation">
+    Manual Simulate tests your answer. Auto Simulate tests what the pinned AI profile can answer from the same reviewed context.
+  </Step>
+  <Step title="Share only when useful">
+    A public profile or saved snapshot exposes only the approved representation, never the owner workspace.
+  </Step>
+</Steps>
 
-| Layer | What it means | Who can use it |
+## One Memory, several workflows
+
+| Workflow | Immediate job | Memory authority |
 | --- | --- | --- |
-| Raw | Your source material, such as a CV, notes, or transcript. | You; selected public Raw excerpts can support a public answer. |
-| Derived | A concise summary linked to Raw source paths. | You review it; published public Derived files can support answers. |
-| Published | An immutable version chosen for the public runtime. | Public Chat, Fast Check, and pinned simulations. |
+| Fast Check | Map evidence to one real vacancy and identify questions to validate. | Active published version at session creation. |
+| Manual Simulate | Rehearse how you would answer a role-specific interview. | The session can exist without published Memory; you write every candidate answer. |
+| Auto Simulate | Test how the AI profile represents you under interview pressure. | Published version pinned when the session is created. |
+| Owner Preview | Test public-style answers privately before sharing. | Current active published version. |
+| Public Chat and CV | Let a visitor explore approved professional context. | Current active published version. |
+| Saved shares | Give a visitor a stable view of one completed resource. | Visitor-safe snapshot created by the owner. |
 
-Editing a draft never silently edits a live profile. Publish a new version and activate it when you are ready.
+## The Memory boundary
 
-## What the public assistant can do
+<Frame caption="Evidence becomes public only through explicit review and publication">
+  ![Owner-supplied Raw evidence can support reviewed Derived Memory, which becomes available to workflows only after explicit publication](/images/memory-flow.svg)
+</Frame>
 
-TLDT can answer questions grounded in published Memory, explain a supported interpretation when you enable it, and use bounded public research for eligible validated conversations. Answers may show provenance labels such as **grounded**, **interpretation**, or **world knowledge**.
+| State | What it contains | Can public or Auto workflows use it? |
+| --- | --- | --- |
+| Raw documents | Owner-supplied evidence stored with server-owned Properties. | Only selected Public excerpts included in the active published version. |
+| Derived documents | Concise operational Memory linked to Raw sources. | Only reviewed Public documents included in the active version. |
+| Draft workspace | Editable Raw and Derived catalogs. | No. Draft edits never change runtime Memory. |
+| Published version | Immutable, validated projection selected by the owner. | Yes, when active or pinned to a session. |
 
-TLDT does not invent personal history, expose Private Memory, reveal source paths or internal traces, or accept a job, salary, schedule, or other commitment for you.
+## What improves automatically — and what does not
 
-## Why this matters
+TLDT can analyze Properties and generate a Private Derived candidate from selected Raw sources. Those outputs remain drafts until you review and save them.
 
-The profile is designed for recruiter conversations, not as a generic chatbot or an automated hiring decision. It gives visitors useful context while keeping personal facts, boundaries, and publication decisions under your control.
+A completed simulation or Chat can be saved to Raw Memory through an explicit owner action. TLDT does not automatically extract a Memory Delta, rewrite Derived Memory, reconcile contradictions, or publish new facts.
 
-<Tip>When a fact matters, add it to Memory with the date, scope, actor, and source that support it. This gives TLDT something precise to use and gives you something precise to review.</Tip>
+## Representation limits
+
+The AI can explain supported professional context and, when the owner allows it, label interpretation or general knowledge. It cannot invent personal history, expose Private Memory, apply for a role, negotiate, declare interest or availability, or make commitments for the owner.
+
+<Tip>
+  Use TLDT to make missing proof visible. A gap in published Memory is a reason to review evidence or ask the owner, not permission to guess.
+</Tip>

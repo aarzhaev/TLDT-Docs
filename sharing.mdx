@@ -1,29 +1,46 @@
 ---
-title: "Share and revoke views"
-description: "Create visitor-safe snapshots of Chat, Fast Check, or Simulate results and control their access."
+title: "Share and revoke saved views"
+description: "Create and revoke visitor-safe snapshots of completed Chat, Fast Check, or Simulate resources."
 icon: "share-nodes"
+sidebarTitle: "Saved shares"
 ---
 
-Sharing is useful when a recruiter needs a stable link to a result rather than a live owner workspace. TLDT creates a visitor-safe snapshot with its own capability token.
+A saved share gives another person a stable, visitor-safe view of one completed TLDT resource. Use it when a specific result is more useful than an ongoing public profile.
 
 ## What you can share
 
-The owner workspace can share:
+The owner can create a saved view for:
 
-- a completed Chat session;
+- a completed public Chat session;
 - a completed public Fast Check;
 - a completed Simulate report.
 
-The recipient sees only the safe snapshot. Depending on the resource, it can include the vacancy, Public CV context, report, transcript, or guide needed to understand the result.
+The snapshot can include the vacancy, Public CV context, report, transcript, or guide needed to understand that resource. It never opens the owner workspace or exposes Private Memory, editable drafts, source paths, prompts, policy reasons, provider metadata, or tool traces.
 
 ## Create a share
 
-Open the resource in **Sessions** or **Preparation**, choose **Share**, review the exact target, and confirm. Copy the generated link only after the UI shows it was created.
+<Steps>
+  <Step title="Open the exact resource">
+    Find the completed Chat, Fast Check, or Simulate item in Sessions or Preparation.
+  </Step>
+  <Step title="Choose Share">
+    Review the resource and confirm that this is the snapshot you intend to expose.
+  </Step>
+  <Step title="Copy the generated link">
+    Share the link only after the UI confirms that the capability exists.
+  </Step>
+</Steps>
 
-<Tip>Use a saved share when you want the recipient to review one specific conversation or simulation. Use the public username when you want an ongoing profile entry point.</Tip>
+<Tip>
+  Use a saved share for one stable result. Use the public username when you want a visitor to explore the active profile through Chat, Fast Check, or Public CV.
+</Tip>
 
-## Revoke vs delete
+## Revoke, delete, and version behavior
 
-**Revoke** disables the share link but keeps the source resource. It is reversible. **Delete** removes the underlying session, report, or version and is a separate destructive action.
+**Revoke** disables the public link but keeps the source resource. **Delete** removes the underlying session, report, or version and is a separate destructive action.
 
-Existing sessions keep their pinned Memory authority. Revoking a share does not silently rewrite the source or activate a newer version.
+A saved snapshot remains tied to the resource and Memory authority from which it was created. Activating newer Memory does not silently rewrite the share.
+
+<Note>
+  A shared report is still a preparation or conversation aid. It does not prove identity, interest, availability, or a hiring outcome.
+</Note>
