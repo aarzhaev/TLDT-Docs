@@ -1,30 +1,42 @@
 ---
-title: "Sessions and summaries"
-description: "Review visitor Chat and public Fast Check activity from the owner workspace."
+title: "Review sessions and summaries"
+description: "Review public Chat and Fast Check activity and explicitly preserve useful material for later Memory review."
 icon: "clock-rotate-left"
+sidebarTitle: "Sessions and summaries"
 ---
 
-Open **Sessions** to review two kinds of visitor activity:
+Sessions let the owner review public Chat and public Fast Check activity after visitors interact with the profile. This review supports follow-up, evidence maintenance, and selective sharing without turning visitor content into trusted facts automatically.
 
-- **Chat** sessions with the visitor's messages and TLDT replies;
-- **Fast Check** sessions with the vacancy and completed fit report.
+## Review public Chat
 
-## Review a Chat session
+A Chat detail view can show safe visitor context, the conversation, answer provenance, validation state, and whether owner attention may be useful.
 
-The detail view can show safe visitor context, the conversation, answer provenance, validation state, and whether owner review is needed. Internal prompts, policy reasons, provider metadata, source paths, and tool traces are not part of the visitor-facing content.
-
-You can:
+The owner can:
 
 - read the transcript;
-- generate or refresh a session summary;
-- save a transcript or summary to Raw Memory for later review;
+- generate or refresh an owner-only session summary;
+- save the transcript or summary to Raw Memory for later review;
 - create or revoke a visitor-safe share;
 - delete the session.
 
-Saving to Raw Memory is an explicit owner action. It gives you a source to review; it does not publish the conversation automatically.
+Internal prompts, policy reasons, provider metadata, source paths, tenant identifiers, and tool traces are not part of visitor-facing content.
 
-## Review a Fast Check
+## Review public Fast Check
 
-The Fast Check list shows completed public checks separately from Chat. Inspect the vacancy evidence, report tabs, and share state. Use **Check again** when you want a new immutable check; the previous report remains unchanged.
+Fast Check sessions appear separately from Chat. Inspect the vacancy, extracted context, report, evidence, questions, and share state.
 
-<Warning>Visitor content is untrusted context. Review it before using it as Raw Memory, especially when it contains claims about a company, role, or person.</Warning>
+Use **Check again** when you need a new immutable diagnostic. The previous completed report remains unchanged.
+
+## Reuse requires owner review
+
+Saving a Chat transcript, summary, or simulation to Raw Memory is an explicit owner action. The saved material becomes a source to inspect; it does not:
+
+- make visitor claims true;
+- change Derived Memory;
+- compare Manual and Auto answers automatically;
+- publish a new Memory version;
+- update an existing report or simulation.
+
+<Warning>
+  Visitor content is untrusted context. Check claims about a company, role, person, date, or outcome before keeping them as evidence.
+</Warning>

@@ -1,41 +1,67 @@
 ---
-title: "Memory overview"
-description: "Learn how TLDT stores, reviews, and publishes the context behind your profile."
+title: "Career Memory"
+description: "Build reviewed professional context that can be reused across role checks, interview preparation, and representation."
 icon: "database"
+sidebarTitle: "Career Memory"
 ---
 
-Memory is the source of what your TLDT can say about your career. It is not a hidden personality prompt and it is not a place for the assistant to guess. You decide what enters the workspace and what becomes public.
+Career Memory is the durable asset behind TLDT. It holds reviewed professional context that can be reused across real vacancies, interview preparation, owner testing, and optional recruiter-facing representation.
+
+A résumé can summarize roles and outcomes. Career Memory can also preserve the context needed to explain them: decisions, constraints, trade-offs, scope, dates, metrics, uncertainty, working style, and boundaries.
+
+## What makes Memory trustworthy
+
+- **Owner supplied:** personal facts begin with evidence the owner chooses to add.
+- **Reviewable:** content and Properties stay editable in a draft before publication.
+- **Separated by state:** Raw evidence, Derived summaries, drafts, and published versions do different jobs.
+- **Explicitly published:** runtime workflows use only an immutable version the owner approved.
+- **Reusable:** the same approved context can support Fast Check, Auto Simulate, Preview, Public Chat, and Public CV.
 
 ## The Memory workspace
 
-Open **Memory** from the owner sidebar. The workspace contains two columns on a large screen and a tabbed view on a smaller screen:
+Open **Memory** from the owner sidebar:
 
-- **Raw** keeps owner-supplied evidence byte-for-byte.
-- **Derived** keeps concise, operational summaries linked to Raw evidence.
-- **Properties** describe how a document should be found and whether it is eligible for publication.
-- **Drafts** let you work on separate versions without changing the live profile.
-- **Versions** show immutable publications and let you activate an approved version.
+- **Raw** keeps original owner-supplied evidence.
+- **Derived** keeps concise operational explanations linked to Raw sources.
+- **Properties** describe retrieval, visibility, sensitivity, and special roles.
+- **Drafts** separate editable workspaces from live representation.
+- **Versions** hold immutable publications and let you activate an approved version.
 
 <CardGroup cols={2}>
-  <Card title="Raw Memory" icon="file-text">Use it for CVs, notes, transcripts, project records, dates, metrics, and original wording.</Card>
-  <Card title="Derived Memory" icon="layers">Use it for topic summaries, role context, recruiter-ready explanations, and special role documents.</Card>
+  <Card title="Raw Memory" icon="file-text">
+    Use it for CVs, notes, transcripts, project records, dates, metrics, and original wording.
+  </Card>
+
+  <Card title="Derived Memory" icon="layers">
+    Use it for focused project context, role explanations, evidence summaries, and representative guidance.
+  </Card>
 </CardGroup>
+
+## Reuse across workflows
+
+| Workflow | How it uses Career Memory |
+| --- | --- |
+| Fast Check | Maps published evidence to one vacancy and exposes gaps or missing proof. |
+| Auto Simulate | Answers interview questions from the version pinned to the session. |
+| Manual Simulate | Does not answer for you, but the session can reveal evidence worth preserving. |
+| Owner Preview | Tests how the active published profile handles likely public questions. |
+| Public profile | Answers visitors from the active published version only. |
+
+A session never silently rewrites Memory. You may save supported session material to Raw Memory explicitly, then review it through the normal draft and publication flow.
 
 ## Special roles
 
-Properties can assign a Public document one special role. Each draft can have at most one Public holder for each role:
+Each draft can have at most one Public document for each special role:
 
 | Role | Purpose |
 | --- | --- |
-| CV | The public career summary shown in the Public CV panel and used as screening context. |
-| Soul | How TLDT should represent your identity and stance. |
-| Boundaries | Topics, commitments, and disclosure limits that need care. |
+| CV | Public career summary and screening context. |
+| Soul | Identity and stance for representation. |
+| Boundaries | Disclosure limits and topics that need care. |
 | Voice | Grounded speaking style and representative language. |
 
-The role comes from Properties, not from a filename. A role document is still subject to the same Public/Private and sensitivity review.
+A special role guides representation; it does not become evidence of work history. The document still follows Public/Private, sensitivity, review, and publication rules.
 
-<Tip>Keep Soul, Boundaries, and Voice separate from career evidence. They guide representation; they do not become proof of work history.</Tip>
-
-## A good document
-
-Include the details that make a claim checkable: who acted, what happened, when it happened, the scope of your responsibility, the metric or denominator, and the source. Keep limitations and uncertainty instead of smoothing them away.
+<Tip>
+  A useful Memory preserves the uncomfortable edges: team vs. individual ownership, approximate vs. exact metrics, missing dates, negative results, and limits. Honest context improves both preparation and representation.
+</Tip>

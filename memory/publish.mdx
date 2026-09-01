@@ -1,40 +1,53 @@
 ---
-title: "Preview and publish Memory"
-description: "Move reviewed documents into an immutable public version and activate it when you are ready."
+title: "Publish and activate Memory"
+description: "Create an immutable reviewed Memory version and activate it for live workflows."
 icon: "eye"
+sidebarTitle: "Publish Memory"
 ---
 
-Publishing is the moment when a selected draft becomes a version that the public runtime can use. The process is explicit so you can see what will go live.
+Publication creates the immutable Career Memory version that TLDT workflows can use. Activation selects which published version is live.
 
-## Preview first
+This boundary protects both preparation and representation: editable drafts can change freely without silently changing Fast Check, Preview, Public Chat, or existing pinned simulations.
+
+## Preview the exact release
 
 Open the publication panel from **Memory**. The preview shows:
 
 - the next version name;
 - the exact Raw and Derived files included;
-- the generated Memory indexes;
+- generated Memory indexes;
 - warnings about sensitive Public files;
-- changes compared with the previous version;
-- the draft and Profile revisions used for the preview.
+- changes from the previous version;
+- draft and Profile revisions used for the preview.
 
-Read the preview like a release checklist. A Public file can be eligible without being the right file for this version.
+Read the preview as a release checklist. A document can be Public and still be wrong for this particular version.
 
 ## Publish and activate
 
 <Steps>
-  <Step title="Resolve warnings">
-    Review missing Properties, duplicate special roles, and High/Restricted sensitivity warnings. Make an explicit decision for sensitive content.
+  <Step title="Resolve document and role warnings">
+    Review missing Properties, duplicate special roles, incomplete documents, and sensitivity warnings.
   </Step>
-  <Step title="Confirm publication">
-    TLDT rechecks that the draft and its revisions have not changed while you were reviewing. The selected content is stored as an immutable version.
+  <Step title="Confirm sensitive content intentionally">
+    Public High or Restricted files require an explicit decision. Confirm only material you are prepared to use in the selected workflows.
+  </Step>
+  <Step title="Publish the immutable version">
+    TLDT rechecks that the draft and revisions have not changed during review, then stores the selected content as a version.
   </Step>
   <Step title="Activate when ready">
-    Activation moves the public runtime pointer to that version. Until activation, the previous live version remains active.
+    Activation moves the public runtime pointer to the new version. Until then, the previous active version continues to power live workflows.
+  </Step>
+  <Step title="Test the result">
+    Use Owner Preview for ordinary public questions, Fast Check for a real vacancy, and Auto Simulate for a role-specific stress test.
   </Step>
 </Steps>
 
-## Versions are independent
+## Version behavior
 
-Changing a draft after publication does not change the published version. To update the profile, edit the draft, preview a new version, publish it, and activate it. To roll back, activate an older immutable version.
+Changing a draft after publication does not change the version. To update live behavior, edit a draft, preview, publish a new version, and activate it. To roll back, activate an older immutable version.
 
-<Warning>Do not treat a successful draft save as a public release. The public profile reads only the active published version, never a draft fallback.</Warning>
+Fast Check and Simulate pin Memory authority at session creation. Activating a newer version does not rewrite an existing report or simulation.
+
+<Warning>
+  A successful draft save is not a release. Runtime workflows read only an active or session-pinned published version; they never fall back to the current draft.
+</Warning>

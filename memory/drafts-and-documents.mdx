@@ -1,38 +1,50 @@
 ---
 title: "Drafts, documents, and Properties"
-description: "Organize Raw and Derived Memory, control visibility, and work safely in separate draft workspaces."
+description: "Organize Raw and Derived Memory, control visibility, and keep editable work separate from runtime versions."
 icon: "folder-open"
+sidebarTitle: "Drafts and documents"
 ---
+
+Draft workspaces let you improve Career Memory without changing the active representation. Documents and Properties stay editable until you publish an immutable version.
 
 ## Draft workspaces
 
-Use drafts when you need different public versions for different stages, roles, or review cycles. A draft can be:
+Use drafts for separate review cycles or intentionally different source sets. A draft can be:
 
 - created empty;
 - copied from another draft;
 - copied from a published version.
 
-Only one draft is active for owner editing at a time. A draft can be renamed, duplicated, switched, or deleted. Published versions stay independent when their source draft changes.
+Only one draft is active for owner editing at a time. You can rename, duplicate, switch, or delete a draft. Editing or deleting the source draft never rewrites an existing published version.
 
-## Properties
+## Documents and Properties
 
-Properties are the catalog information that helps TLDT use a document safely:
+A document contains the evidence or explanation. Properties tell TLDT how it may be retrieved and whether it is eligible for publication:
 
 - title and summary;
-- topics and **use when** retrieval hints;
+- topics and **use when** hints;
 - visibility: **Public** or **Private**;
 - sensitivity: **Low**, **Medium**, **High**, or **Restricted**;
 - source paths for Derived documents;
 - CV, Soul, Boundaries, and Voice role flags.
 
-**Public** means “eligible for the next publication.” It does not mean “live now.” **Private** means owner workspace only.
+**Public** means eligible for the next publication. It does not mean live. **Private** means owner workspace only and excludes the document from the published runtime.
 
-## Editing and deletion
+## Raw and Derived serve different jobs
 
-Editing a document creates a new revision. Changing visibility, sensitivity, or a role flag changes Properties without rewriting the Raw content. Deleting a source or version is a separate destructive action from revoking a share.
+| Document type | Use it for | Review question |
+| --- | --- | --- |
+| Raw | Original notes, transcripts, CVs, records, and source wording. | Is this owner-supplied evidence accurate, scoped, and safe to retain? |
+| Derived | Concise explanations and context linked to Raw sources. | Does every personal claim remain supported by the cited sources? |
 
-<Tip>For Derived Memory, review the source paths as carefully as the summary. They tell you whether the concise explanation still matches the evidence.</Tip>
+Properties never turn a preference, instruction, or style guide into evidence of career history.
 
-## Sensitivity warnings
+## Revisions, deletion, and sensitivity
 
-Public High or Restricted documents require an explicit decision during publication. Lower the sensitivity only when that matches your intent and the content is safe for the public profile.
+Editing a document creates a new revision. Changing visibility, sensitivity, or a role flag updates Properties without rewriting Raw content. Deleting a draft, document, version, or session is separate from revoking a saved share.
+
+Public High or Restricted documents require an explicit publication decision. Lower sensitivity only when that matches both the content and your disclosure intent.
+
+<Tip>
+  Create a new draft when you need a safe review boundary. Do not use drafts as an automatic role-tailoring system; every published version still needs deliberate review.
+</Tip>
