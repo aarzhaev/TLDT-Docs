@@ -6,6 +6,7 @@
   --tldt-muted: oklch(0.45 0 0);
   --tldt-hover: oklch(0.9 0 0);
   --tldt-blue: #0088ff;
+  --tldt-green: #166534;
   --tldt-orange: #f05a24;
   --tldt-radius-control: 0.625rem;
   --tldt-radius-shell: 0.75rem;
@@ -21,6 +22,7 @@ html.dark {
   --tldt-muted: oklch(0.6 0 0);
   --tldt-hover: oklch(0.25 0 0);
   --tldt-blue: #137bf2;
+  --tldt-green: #86efac;
   --tldt-orange: #d44509;
 }
 
@@ -721,8 +723,100 @@ article blockquote {
   border-left: 3px solid var(--tldt-orange) !important;
 }
 
-article .callout {
+article .callout:not([data-callout-type="tip"]),
+#content .callout:not([data-callout-type="tip"]) {
   border: 0 !important;
+}
+
+article .callout[data-callout-type="warning"],
+#content .callout[data-callout-type="warning"] {
+  background: color-mix(in srgb, var(--tldt-orange) 10%, transparent) !important;
+  border: 1px solid color-mix(in srgb, var(--tldt-orange) 25%, transparent) !important;
+  color: var(--tldt-orange) !important;
+}
+
+article .callout[data-callout-type="warning"] .prose,
+#content .callout[data-callout-type="warning"] .prose,
+article .callout[data-callout-type="warning"] .prose :where(*:not(a)),
+#content .callout[data-callout-type="warning"] .prose :where(*:not(a)) {
+  color: var(--tldt-orange) !important;
+}
+
+article .callout[data-callout-type="warning"] [data-component-part="callout-icon"],
+#content .callout[data-callout-type="warning"] [data-component-part="callout-icon"] {
+  color: var(--tldt-orange) !important;
+  transform: translateY(2px);
+}
+
+article .callout[data-callout-type="warning"] [data-component-part="callout-icon"] svg,
+#content .callout[data-callout-type="warning"] [data-component-part="callout-icon"] svg {
+  color: var(--tldt-orange) !important;
+}
+
+article .callout[data-callout-type="warning"] a,
+#content .callout[data-callout-type="warning"] a {
+  color: var(--tldt-orange) !important;
+  text-decoration-color: color-mix(in srgb, var(--tldt-orange) 45%, transparent) !important;
+}
+
+article .callout[data-callout-type="warning"] a:hover,
+#content .callout[data-callout-type="warning"] a:hover {
+  color: color-mix(in srgb, var(--tldt-orange) 85%, var(--tldt-foreground)) !important;
+}
+
+article .callout[data-callout-type="note"],
+#content .callout[data-callout-type="note"] {
+  background: color-mix(in srgb, var(--tldt-blue) 10%, transparent) !important;
+  border: 1px solid color-mix(in srgb, var(--tldt-blue) 25%, transparent) !important;
+  color: var(--tldt-blue) !important;
+}
+
+article .callout[data-callout-type="note"] .prose,
+#content .callout[data-callout-type="note"] .prose,
+article .callout[data-callout-type="note"] .prose :where(*:not(a)),
+#content .callout[data-callout-type="note"] .prose :where(*:not(a)) {
+  color: var(--tldt-blue) !important;
+}
+
+article .callout[data-callout-type="note"] [data-component-part="callout-icon"],
+#content .callout[data-callout-type="note"] [data-component-part="callout-icon"] {
+  color: var(--tldt-blue) !important;
+  transform: translateY(2px);
+}
+
+article .callout[data-callout-type="note"] [data-component-part="callout-icon"] svg,
+#content .callout[data-callout-type="note"] [data-component-part="callout-icon"] svg {
+  color: var(--tldt-blue) !important;
+}
+
+article .callout[data-callout-type="note"] a,
+#content .callout[data-callout-type="note"] a {
+  color: var(--tldt-blue) !important;
+  text-decoration-color: color-mix(in srgb, var(--tldt-blue) 45%, transparent) !important;
+}
+
+article .callout[data-callout-type="tip"] .prose,
+#content .callout[data-callout-type="tip"] .prose,
+article .callout[data-callout-type="tip"] .prose :where(*:not(a)),
+#content .callout[data-callout-type="tip"] .prose :where(*:not(a)) {
+  color: var(--tldt-green) !important;
+}
+
+article .callout[data-callout-type="tip"] [data-component-part="callout-icon"],
+#content .callout[data-callout-type="tip"] [data-component-part="callout-icon"] {
+  color: var(--tldt-green) !important;
+  transform: translateY(2px);
+}
+
+article .callout[data-callout-type="tip"] [data-component-part="callout-icon"] svg,
+#content .callout[data-callout-type="tip"] [data-component-part="callout-icon"] svg {
+  color: var(--tldt-green) !important;
+}
+
+article .callout[data-callout-type="tip"] a,
+#content .callout[data-callout-type="tip"] a {
+  color: var(--tldt-green) !important;
+  text-decoration-color: color-mix(in srgb, var(--tldt-green) 45%, transparent) !important;
 }
 
 .accordion-group {
