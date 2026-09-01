@@ -168,7 +168,37 @@ html.dark #navbar a:has(> img.nav-logo)::before {
   border: 0 !important;
   border-radius: var(--tldt-radius-shell) !important;
   padding-top: 1.5rem !important;
-  padding-bottom: 3rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+#content-container > .flex.flex-row-reverse {
+  align-items: flex-start !important;
+}
+
+#content-side-layout {
+  height: auto !important;
+}
+
+#table-of-contents-layout {
+  max-height: none !important;
+}
+
+#table-of-contents {
+  overflow: visible !important;
+}
+
+#table-of-contents a:not(.text-primary) {
+  color: color-mix(in srgb, var(--tldt-foreground) 60%, transparent) !important;
+  transition: color 300ms ease, border-color 300ms ease !important;
+}
+
+html.dark #table-of-contents a:not(.text-primary):not(.dark\:text-primary-light) {
+  color: color-mix(in srgb, var(--tldt-foreground) 60%, transparent) !important;
+}
+
+#table-of-contents a:not(.text-primary):hover,
+html.dark #table-of-contents a:not(.text-primary):not(.dark\:text-primary-light):hover {
+  color: color-mix(in srgb, var(--tldt-foreground) 60%, transparent) !important;
 }
 
 @media (min-width: 1024px) {
@@ -442,8 +472,7 @@ html.dark #navigation-items .sidebar-group a[class*="bg-primary"] svg {
 
 /* Mintlify leaves internal navbar links as plain text; match external .navbar-link chips. */
 #navbar nav ul > li.list-none,
-#navbar .navbar-link,
-#navbar #topbar-cta-button > a {
+#navbar .navbar-link {
   display: inline-flex !important;
   align-items: center !important;
   min-height: 2rem;
@@ -463,15 +492,63 @@ html.dark #navigation-items .sidebar-group a[class*="bg-primary"] svg {
 }
 
 #navbar nav ul > li.list-none:hover,
-#navbar .navbar-link:hover,
-#navbar #topbar-cta-button > a:hover {
+#navbar .navbar-link:hover {
   background: color-mix(in srgb, var(--tldt-foreground) 7%, transparent) !important;
   color: var(--tldt-foreground) !important;
   opacity: 1 !important;
 }
 
+#navbar #topbar-cta-button > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 2rem;
+  padding: 0.375rem 0.625rem !important;
+  border: 0 !important;
+  border-radius: var(--tldt-radius-shell) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: color-mix(in srgb, var(--tldt-foreground) 35%, transparent) !important;
+  opacity: 1 !important;
+  transition: color 300ms ease, background-color 300ms ease !important;
+}
+
+html.dark #navbar #topbar-cta-button > a {
+  color: color-mix(in srgb, var(--tldt-foreground) 25%, transparent) !important;
+}
+
+#navbar #topbar-cta-button > a:hover,
+html.dark #navbar #topbar-cta-button > a:hover {
+  background: color-mix(in srgb, var(--tldt-foreground) 7%, transparent) !important;
+  color: var(--tldt-foreground) !important;
+  opacity: 1 !important;
+}
+
+#navbar #topbar-cta-button > a:hover span,
+html.dark #navbar #topbar-cta-button > a:hover span {
+  color: inherit !important;
+}
+
 #navbar #topbar-cta-button span {
   color: inherit !important;
+  transition: color 300ms ease !important;
+}
+
+#navbar .navbar-link:not(:hover),
+#navbar .navbar-link:not(:hover) > a {
+  color: color-mix(in srgb, var(--tldt-foreground) 35%, transparent) !important;
+  transition: color 300ms ease !important;
+}
+
+html.dark #navbar .navbar-link:not(:hover),
+html.dark #navbar .navbar-link:not(:hover) > a {
+  color: color-mix(in srgb, var(--tldt-foreground) 25%, transparent) !important;
+}
+
+#navbar .navbar-link:hover,
+#navbar .navbar-link:hover > a,
+html.dark #navbar .navbar-link:hover,
+html.dark #navbar .navbar-link:hover > a {
+  color: var(--tldt-foreground) !important;
 }
 
 #search-bar-entry:hover {
@@ -536,9 +613,25 @@ article h2 {
   margin-top: 2.75rem;
 }
 
-article a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+article a:not(.card):not([role="button"]):not([class*="group/link"]),
+#content .prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)),
+#content a.link {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 3px !important;
+  text-decoration-color: color-mix(in srgb, currentColor 30%, transparent) !important;
+  border-bottom: 0 !important;
+  font-weight: inherit !important;
+  transition: color 300ms ease, text-decoration-color 300ms ease !important;
+}
+
+article a:not(.card):not([role="button"]):not([class*="group/link"]):hover,
+#content .prose :where(a:hover):not(:where([class~="not-prose"], [class~="not-prose"] *)),
+#content a.link:hover {
+  color: var(--tldt-blue) !important;
+  text-decoration-thickness: 1px !important;
+  text-decoration-color: var(--tldt-blue) !important;
+  border-bottom: 0 !important;
 }
 
 /* Product surfaces are defined by tone and spacing, not visible outlines. */
@@ -748,6 +841,7 @@ article [data-component-part="frame"] {
 button,
 a {
   transition-duration: 300ms;
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow, filter;
 }
 
 button:active,
