@@ -198,7 +198,7 @@ html.dark #table-of-contents a:not(.text-primary):not(.dark\:text-primary-light)
 
 #table-of-contents a:not(.text-primary):hover,
 html.dark #table-of-contents a:not(.text-primary):not(.dark\:text-primary-light):hover {
-  color: color-mix(in srgb, var(--tldt-foreground) 60%, transparent) !important;
+  color: var(--tldt-foreground) !important;
 }
 
 @media (min-width: 1024px) {
