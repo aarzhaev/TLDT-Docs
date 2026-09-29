@@ -1,24 +1,57 @@
 # TLDT Docs
 
-Mintlify documentation for TLDT, the candidate-owned AI career profile for recruiter conversations.
+Official public documentation for [TLDT](https://tldt.me), an owner-controlled career memory and AI representation system for role fit, interview preparation, and selective professional sharing.
 
-## Local preview
+TLDT helps people build reviewed Career Memory, check how their experience maps to real roles, prepare for interviews, and control what an AI profile can represent publicly.
 
-Install the pinned Mintlify CLI and run:
+- **Documentation:** https://docs.tldt.me
+- **TLDT:** https://tldt.me
+
+## Documentation scope
+
+This repository contains documentation for:
+
+- getting started with TLDT
+- Career Memory and owner review
+- importing, generating, reviewing, and publishing career evidence
+- Fast Check for role fit
+- interview simulation and preparation
+- public profile, chat, CV, and sharing
+- integrations, account, privacy, and representation boundaries
+
+The documentation site is built with [Mintlify](https://mintlify.com).
+
+## Local development
+
+Install dependencies and start the local documentation server:
 
 ```bash
 npm install
 npm run dev
 ```
 
-The checked-in CLI version keeps local preview markup and styles aligned with
-the hosted Mintlify runtime. Update the pin deliberately and verify both themes
-before committing a runtime upgrade.
+Validate the documentation before publishing:
 
-The site configuration lives in `docs.json`. The visual language is defined in `style.css` and uses the TLDT palette: soft neutral surfaces, orange action accents, blue information accents, rounded panels, and generous spacing. The SVG logo and diagrams live in `logo/` and `images/`.
+```bash
+npm run validate
+```
 
-Mintlify hosts a search MCP server for this site at `https://docs.tldt.me/mcp`. After deploy, readers can connect from the page contextual menu (`Connect to Cursor`, copy MCP URL, and similar). For local editors, use `.vscode/mcp.json`.
+The Mintlify configuration lives in `docs.json`. Custom visual styles are defined in `style.css`, with assets in `logo/` and `images/`.
+
+The checked-in Mintlify CLI version is pinned so local preview stays aligned with the hosted runtime. Update it deliberately and verify both themes before committing a runtime upgrade.
+
+## MCP
+
+Mintlify exposes a search MCP server for the documentation at:
+
+```
+https://docs.tldt.me/mcp
+```
+
+Readers can also connect from the documentation contextual menu. Local editor configuration is available in `.vscode/mcp.json`.
 
 ## Content rule
 
-Write for a first-time user. Describe current behavior only. If a feature depends on an owner setting, published Memory, or an integration, say so directly. Never present a draft, suggestion, simulation, or diagnostic report as a binding decision.
+Write for a first-time user and describe current behavior only.
+
+If a feature depends on an owner setting, published Memory, or an integration, state that explicitly. Never present a draft, suggestion, simulation, or diagnostic report as a binding decision. Keep owner control, evidence boundaries, and the distinction between private preparation and public representation explicit.
