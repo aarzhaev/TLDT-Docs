@@ -56,7 +56,7 @@ Readers can also connect from the documentation contextual menu. Local editor co
 
 Write for a first-time user and describe current behavior only.
 
-If a feature depends on an owner setting, published Memory, or an integration, state that explicitly. Never present a draft, suggestion, simulation, or diagnostic report as a binding decision. Keep owner control, evidence boundaries, and the distinction between private preparation and public representation explicit.
+If a feature depends on an owner setting, published Memory, or an integration, state that explicitly. Never present a draft, suggestion, simulation, or diagnostic report as a binding decision. Keep owner control, evidence boundaries, and the distinction between private preparation and public representation explicit. Link feature mentions, prerequisites, and next steps to their owning guide. Use root-relative paths and section anchors when the reader needs a specific action.
 
 ## Content maintenance
 

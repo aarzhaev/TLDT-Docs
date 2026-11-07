@@ -6,7 +6,7 @@ icon: "folder-open"
 sidebarTitle: "Drafts and documents"
 ---
 
-Draft workspaces let you improve Career Memory without changing the active representation. Documents and Properties stay editable until you publish an immutable version.
+Draft workspaces let you improve Career Memory without changing the active representation. Documents and Properties stay editable until you [publish an immutable version](/memory/publish).
 
 ## Draft workspaces
 
@@ -18,7 +18,7 @@ Use drafts for separate review cycles or intentionally different source sets. A 
 
 Only one draft is active for owner editing at a time. You can rename, duplicate, switch, or delete a draft. Editing or deleting the source draft never rewrites an existing published version.
 
-The first upload or document creation makes a draft if you do not have one. Use **Create** for a new Raw note or Derived card, or **Upload** to add [supported files](/memory/import-guide). Opening a card shows its content and Properties. Published snapshots are read-only; return to a draft to edit.
+The first upload or document creation makes a draft if you do not have one. Use **Create** for a new Raw note or Derived card, or **Upload** to add [supported files](/memory/import-guide#if-you-are-starting-with-documents). Opening a card shows its content and Properties. Published snapshots are read-only; return to a draft to edit.
 
 ## Documents and Properties
 
@@ -29,7 +29,7 @@ A document contains the evidence or explanation. Properties tell TLDT how it may
 - visibility: **Public** or **Private**;
 - sensitivity: **Low**, **Medium**, **High**, or **Restricted**;
 - source paths for Derived documents;
-- CV, Soul, Boundaries, and Voice role flags.
+- [CV, Soul, Boundaries, and Voice role flags](/memory/overview#special-roles).
 
 **Public** means eligible for the next publication. It does not mean live. **Private** means owner workspace only and excludes the document from the published runtime.
 
@@ -48,7 +48,7 @@ Imported Markdown can supply initial Properties. Check them after upload. If Pro
 
 Open the draft or published version you want and choose **Export** in Memory. TLDT downloads the complete documents, including files whose cards you have not opened, as a ZIP with `raw/`, `derived/`, and a `properties.json` manifest.
 
-A draft export includes its Private documents as well as Public ones. Keep that archive private unless you have reviewed everything it contains. It is a Memory workspace export, not an export of all account sessions, searches, and integrations.
+A draft export includes its Private documents as well as Public ones. Keep that archive private unless you have reviewed everything it contains. It is a Memory workspace export, not an [export of all account sessions, searches, and integrations](/account#download-your-memory).
 
 To reuse exported document files, unpack the archive and upload supported files to the appropriate layer, then review their Properties. There is no one-click ZIP restoration of the entire account or workspace manifest.
 
@@ -58,9 +58,9 @@ To reuse exported document files, unpack the archive and upload supported files 
 
 ## Revisions, deletion, and sensitivity
 
-Editing a document creates a new revision. Changing visibility, sensitivity, or a role flag updates Properties without rewriting Raw content. Deleting a draft, document, version, or session is separate from revoking a saved share.
+Editing a document creates a new revision. Changing visibility, sensitivity, or a role flag updates Properties without rewriting Raw content. Deleting a draft, document, version, or session is separate from [revoking a saved share](/sharing#revoke-delete-and-version-behavior).
 
-Public High or Restricted documents require an explicit publication decision. Lower sensitivity only when that matches both the content and your disclosure intent.
+Public High or Restricted documents require an [explicit publication decision](/memory/publish#publish-the-reviewed-version). Lower sensitivity only when that matches both the content and your disclosure intent.
 
 <Tip>
   Create a new draft when you need a safe review boundary. Do not use drafts as an automatic role-tailoring system; every published version still needs deliberate review.

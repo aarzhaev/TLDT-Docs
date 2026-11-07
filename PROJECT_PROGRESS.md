@@ -1,5 +1,22 @@
 # Documentation progress
 
+## 2026-11-07: Connect the user workflow with contextual links
+
+Added 263 contextual internal links across all 26 public pages, including every
+step of the Overview pathway, Quickstart actions, FAQ answers, prerequisites,
+and handoffs between search, preparation, Memory review and public sharing.
+Links to specific tasks target the relevant section, such as Auto/Manual mode,
+gap answers, proposal review, source selection, publication and revocation.
+Existing page paths, headings, metadata, navigation and visual styles are unchanged.
+
+Verification: Mintlify build validation and the internal-link/anchor checker
+passed. All 26 pages have incoming and outgoing contextual links; all 52 distinct
+section targets match current headings. Local browser clicks followed Overview
+Auto Simulate to the mode section, Simulate Your answer to the gap-answer section,
+and gap proposal acceptance to Memory Loop review, with the target section visible.
+This change affects documentation only and follows the authorized `main` publishing
+workflow.
+
 ## 2026-11-07: Update public docs for the current career workflow
 
 Updated the 19 existing public pages and added seven guides, for 26 pages in
