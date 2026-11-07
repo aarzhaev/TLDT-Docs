@@ -1,53 +1,54 @@
 ---
 title: "Publish and activate Memory"
-description: "Create an immutable reviewed Memory version and activate it for live workflows."
+description: "Review the complete Public draft, make an immutable Memory version active, and understand what changes for search, sessions, and your public twin."
+keywords: ["publish", "activate", "versions", "privacy", "rollback"]
 icon: "eye"
 sidebarTitle: "Publish Memory"
 ---
 
-Publication creates the immutable Career Memory version that TLDT workflows can use. Activation selects which published version is live.
+**Publish** in the Memory workspace creates an immutable snapshot and makes it active. This is the step that allows reviewed draft changes to affect new answers and checks. Enabling your public username link is a separate setting.
 
-This boundary protects both preparation and representation: editable drafts can change freely without silently changing Fast Check, Preview, Public Chat, or existing pinned simulations.
+## Before publishing
 
-## Preview the exact release
+Review the current draft's Raw and Derived cards. Mark only the intended documents **Public**, check special roles, and keep anything that should remain outside the runtime **Private**.
 
-Open the publication panel from **Memory**. The preview shows:
+If you used Memory Loop, accept the proposals you want first. Pending, rejected, or outdated proposals are not part of the draft publication. Acceptance alone does not publish them.
 
-- the next version name;
-- the exact Raw and Derived files included;
-- generated Memory indexes;
-- warnings about sensitive Public files;
-- changes from the previous version;
-- draft and Profile revisions used for the preview.
-
-Read the preview as a release checklist. A document can be Public and still be wrong for this particular version.
-
-## Publish and activate
+## Publish the reviewed version
 
 <Steps>
-  <Step title="Resolve document and role warnings">
-    Review missing Properties, duplicate special roles, incomplete documents, and sensitivity warnings.
+  <Step title="Choose Publish in Memory">
+    Inspect the proposed version, included documents, changes from the previous version, and warnings. This reviews the full Public draft, not only the most recent card you edited.
   </Step>
-  <Step title="Confirm sensitive content intentionally">
-    Public High or Restricted files require an explicit decision. Confirm only material you are prepared to use in the selected workflows.
+  <Step title="Resolve warnings and sensitive-content decisions">
+    Check missing Properties, conflicting special roles, and sensitive Public content. High or Restricted documents require an explicit decision. Keep a document Private when it should not be part of published Memory; do not lower sensitivity just to dismiss a warning.
   </Step>
-  <Step title="Publish the immutable version">
-    TLDT rechecks that the draft and revisions have not changed during review, then stores the selected content as a version.
+  <Step title="Confirm publication">
+    TLDT checks that the reviewed draft is still current, creates the version, and makes it live. If another edit changed the draft during review, refresh and inspect the current version before trying again.
   </Step>
-  <Step title="Activate when ready">
-    Activation moves the public runtime pointer to the new version. Until then, the previous active version continues to power live workflows.
-  </Step>
-  <Step title="Test the result">
-    Use Owner Preview for ordinary public questions, Fast Check for a real vacancy, and Auto Simulate for a role-specific stress test.
+  <Step title="Check Search Profile and test the result">
+    Publication reports the separate Search Profile update outcome. If it needs attention, return to **Profile** to review the context and update it. Test the changed evidence in Preview, a new Fast Check, or a new Auto Simulate session.
   </Step>
 </Steps>
 
-## Version behavior
+A Search Profile update failure does not undo a successful Memory publication. Read the status so you know which action needs retrying.
 
-Changing a draft after publication does not change the version. To update live behavior, edit a draft, preview, publish a new version, and activate it. To roll back, activate an older immutable version.
+## Published versions and drafts
 
-Fast Check and Simulate pin Memory authority at session creation. Activating a newer version does not rewrite an existing report or simulation.
+A published version is read-only. Changing or deleting its source draft does not rewrite it. To revise the active Memory, edit a draft and publish a new version.
 
-<Warning>
-  A successful draft save is not a release. Runtime workflows read only an active or session-pinned published version; they never fall back to the current draft.
-</Warning>
+Use the versions panel to inspect an earlier snapshot or make it active again. Activating a version changes the runtime source; switching the active editing draft does not. Review Search Profile after switching versions as well.
+
+[Save CV in Profile](/profile) is a narrower publication action available when there is no active published CV. It publishes that CV while preserving the existing published Memory. Normal **Publish** reviews the full Public draft.
+
+## Existing sessions remain historical
+
+Fast Check and Simulate keep the Memory version selected when they were created. Later publication does not rewrite their reports, transcripts, Memory Gap findings, or saved shares. Create a new check or simulation to assess the new evidence.
+
+Gap statuses remain manual. Publishing a better answer does not close a Memory Gap automatically; verify it and close or archive it yourself.
+
+## Public Memory and the public link
+
+You can use active published Memory for private search and preparation while your Public link is off. To let visitors use the twin, review [Public profile settings](/settings/public-link), test it, and enable the link deliberately.
+
+Public documents are eligible to inform public answers when that link is enabled. Hiding the Public CV panel only hides that panel; it does not remove the CV from published Memory. Change the Memory publication when you need to change which evidence the twin may use.

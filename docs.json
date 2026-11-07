@@ -16,15 +16,7 @@
     "groups": [
       {
         "group": "Start here",
-        "pages": ["overview", "quickstart", "how-tldt-works", "faq"]
-      },
-      {
-        "group": "Prepare for a role",
-        "pages": [
-          "public-profile/fast-check",
-          "owner-review/simulate",
-          "owner-review/preview"
-        ]
+        "pages": ["overview", "quickstart", "how-tldt-works", "profile"]
       },
       {
         "group": "Career Memory",
@@ -37,20 +29,36 @@
         ]
       },
       {
+        "group": "Find a role",
+        "pages": ["jobs/search", "jobs/instant-fit", "jobs/saved-vacancies"]
+      },
+      {
+        "group": "Prepare and improve",
+        "pages": [
+          "public-profile/fast-check",
+          "owner-review/simulate",
+          "memory/gaps",
+          "memory/loop"
+        ]
+      },
+      {
         "group": "Represent and share",
         "pages": [
+          "owner-review/preview",
+          "settings/public-link",
           "public-profile/overview",
           "public-profile/chat",
           "owner-review/sessions",
           "sharing",
-          "settings/public-link"
+          "settings/meetings"
         ]
       },
       {
         "group": "Settings and privacy",
         "pages": [
           "settings/integrations",
-          "account"
+          "account",
+          "faq"
         ]
       }
     ]
@@ -75,5 +83,5 @@
   "footer": {
     "socials": {}
   },
-  "description": "Learn how to use owner-controlled Career Memory for role fit, interview preparation, and selective AI representation."
+  "description": "Build Career Memory, find relevant jobs, check fit, practice interviews, improve your Memory, and choose what your AI representative can share."
 }

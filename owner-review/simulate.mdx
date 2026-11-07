@@ -1,66 +1,84 @@
 ---
 title: "Simulate an interview"
-description: "Use Manual mode to rehearse your own answers or Auto mode to test the pinned AI profile."
+description: "Rehearse a real vacancy in Manual mode, test your published twin in Auto mode, and turn useful answers into reviewed Career Memory improvements."
+keywords: ["Simulate", "Manual", "Auto", "interview", "Memory Gaps"]
 icon: "user-check"
 sidebarTitle: "Simulate"
 ---
 
-Simulate is an owner-only interview preparation workflow for one real vacancy. It uses the same role context as Fast Check but answers a different question: how will the interview conversation unfold?
+Simulate is a private interview-preparation workflow for one vacancy. An AI interviewer asks role-specific questions and follow-ups. You can answer yourself or let the twin answer from published Memory, then review the transcript, diagnostic report, and Memory Gaps.
 
-## Choose the candidate response mode
+## Choose who answers
 
 <CardGroup cols={2}>
-  <Card title="Manual — How would I answer?" icon="user">
-    You write every candidate response. Use Manual mode to rehearse examples, phrasing, and honest boundaries in your own voice.
+  <Card title="Manual: practice your answers" icon="user">
+    Type or dictate your response, review the text, and send it. Use your own examples to rehearse how you explain your work.
   </Card>
-
-  <Card title="Auto — What can my AI profile answer?" icon="robot">
-    TLDT answers from the published Career Memory version pinned to the session. Use Auto mode to test the quality and limits of your approved representation.
+  <Card title="Auto: test your twin" icon="robot">
+    TLDT answers from the published Memory pinned to the session. Use it to see what your representation can explain and where evidence is missing.
   </Card>
 </CardGroup>
 
-Manual and Auto are not better and worse versions of the same mode. They test different subjects: your live answer and the published profile's answer.
+You can switch modes in an eligible session. Each answer retains its recorded author, so an Auto answer does not become your testimony merely because you later switch to Manual.
 
-## Create a simulation
+A session created without active published Memory stays **Manual-only**. Publish Memory and create a new session to use Auto and Memory-gap analysis.
+
+## Set up an interview
 
 <Steps>
-  <Step title="Open Preparation → Simulate">
-    Create a simulation and paste one job link or vacancy description.
+  <Step title="Choose a real vacancy">
+    Open **Preparation → Simulate**, use a saved vacancy, or paste a job link or description. You can also launch Simulate directly from a Job Search vacancy detail.
   </Step>
-  <Step title="Review the vacancy">
-    Confirm the extracted role, company, location, work model, specialization, and description when available.
+  <Step title="Analyze and review the vacancy">
+    Check the extracted role and requirements. Correct missing or inaccurate source text before generating the interview guide.
   </Step>
-  <Step title="Choose the setup">
-    Select **20** or **40 minutes**, an HR model, a TLDT model, a language, and an interview style: **Realistic** or **Diagnostic**.
+  <Step title="Choose the setup and generate the guide">
+    Select **20** or **40 minutes**, the available HR and TLDT models, language, and **Realistic** or **Diagnostic** style. Review the generated guide. Changes to guide-defining settings may require generating it again.
   </Step>
-  <Step title="Choose Manual or Auto">
-    Select **Manual** to answer yourself or **Auto** to let the pinned AI profile answer. A session created without active published Memory remains Manual-only.
+  <Step title="Start in Manual or Auto">
+    Manual waits for your candidate responses. Auto continues with the twin answering. Use **Pause** and **Resume** to control the run; saved sessions remain available in the history list.
   </Step>
-  <Step title="Run, pause, and resume">
-    Start the interview and continue until the guide is complete. Pausing preserves the session so you can return later.
-  </Step>
-  <Step title="Review the report">
-    Inspect the transcript, verdict, strengths, concerns, missing evidence, and questions to validate. Treat the report as preparation, not an outcome prediction.
+  <Step title="Review the result">
+    Inspect the transcript and report for strengths, concerns, evidence gaps, and questions to validate. Open **Memory Gaps** for findings tied to this session's evidence.
   </Step>
 </Steps>
 
-## Realistic vs Diagnostic
+| Interview style | Use it for |
+| --- | --- |
+| Realistic | A natural first-screen conversation that can finish once important requirements and gaps are covered. |
+| Diagnostic | More systematic probing of evidence coverage and the interview guide. |
 
-| Interview style | Best for | What changes |
-| --- | --- | --- |
-| Realistic | Rehearsing the shape and pace of a first screen. | HR follows the guide naturally and may finish after the important requirements and gaps are covered. |
-| Diagnostic | Stress-testing evidence coverage. | HR probes more of the guide and follows gaps more strictly. |
+Style controls the interviewer. Manual or Auto controls the candidate response.
 
-Interview style controls HR behavior. Manual or Auto controls who writes the candidate answer.
+## Voice and assisted drafting
 
-## Memory and session boundaries
+In Manual mode, the microphone transcribes into the editable answer. Review it and send it yourself. Recording is speech-to-text, not a live voice conversation.
 
-A simulation pins its published Memory version when the session is created. Later publication does not rewrite the interview or report.
+When the session has published Memory, **Generate LLM response** can prepare a candidate draft for review. Check every claim before using it. Generating a draft is not evidence that you personally supplied or verified a new fact.
 
-You may explicitly save the vacancy, interviewer, transcript, and report to Raw Memory. This preserves a source for later review. It does not automatically extract a Memory Delta, change Derived Memory, compare Manual and Auto answers, or publish new facts.
+## Improve Memory after practice
 
-A completed simulation can also become a visitor-safe saved share when you want another person to review the exact snapshot.
+1. Open a finding in the report's **Memory Gaps** tab or the Memory workspace.
+2. Review the question and its source. If it includes an eligible answer you gave in Manual mode, use **Use this answer** to copy the complete saved response.
+3. Add missing detail under **Your answer**, or dictate a fresh explanation without running another simulation.
+4. Use [Generate Memory and Review](/memory/loop) to prepare changes, then accept and publish only what you approve.
 
-<Warning>
-  Simulate is not a live interview copilot and does not supply hidden real-time answers during an actual interview.
-</Warning>
+An Auto run is useful for exposing what the twin cannot yet explain. Your own answer supplies the evidence needed to improve it. Gaps remain Open until you explicitly change their status.
+
+## Save, export, clone, or share
+
+The simulation action menu includes:
+
+- **Clone** to create another preparation session from an existing setup.
+- **Export .md** to download the simulation as Markdown.
+- **Save to Memory** to preserve the vacancy, interviewer, transcript, and report in Raw Memory.
+- **Share** for an eligible completed visitor-safe snapshot, with a separate revoke action.
+- **Delete** to remove the source session.
+
+Saving the full transcript is different from Memory Loop: it preserves a source without proposing or applying Derived changes. Review session content before publishing any material derived from it.
+
+Existing simulations retain their original Memory version after you publish improvements. Create a new simulation to test the new version.
+
+<Note>
+  Reports support preparation; they do not predict a real hiring outcome. Simulate is not a hidden live interview copilot and does not submit applications or make commitments for you.
+</Note>

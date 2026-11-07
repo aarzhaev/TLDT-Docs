@@ -1,6 +1,7 @@
 ---
 title: "Drafts, documents, and Properties"
-description: "Organize Raw and Derived Memory, control visibility, and keep editable work separate from runtime versions."
+description: "Organize Raw and Derived documents, review Properties and visibility, manage drafts separately from published versions, and export complete Memory."
+keywords: ["drafts", "Properties", "visibility", "export", "documents"]
 icon: "folder-open"
 sidebarTitle: "Drafts and documents"
 ---
@@ -16,6 +17,8 @@ Use drafts for separate review cycles or intentionally different source sets. A 
 - copied from a published version.
 
 Only one draft is active for owner editing at a time. You can rename, duplicate, switch, or delete a draft. Editing or deleting the source draft never rewrites an existing published version.
+
+The first upload or document creation makes a draft if you do not have one. Use **Create** for a new Raw note or Derived card, or **Upload** to add [supported files](/memory/import-guide). Opening a card shows its content and Properties. Published snapshots are read-only; return to a draft to edit.
 
 ## Documents and Properties
 
@@ -38,6 +41,20 @@ A document contains the evidence or explanation. Properties tell TLDT how it may
 | Derived | Concise explanations and context linked to Raw sources. | Does every personal claim remain supported by the cited sources? |
 
 Properties never turn a preference, instruction, or style guide into evidence of career history.
+
+Imported Markdown can supply initial Properties. Check them after upload. If Properties analysis is unavailable or incomplete, review the saved document and use the available analysis or retry action before relying on it for publication.
+
+## Export a draft or version
+
+Open the draft or published version you want and choose **Export** in Memory. TLDT downloads the complete documents, including files whose cards you have not opened, as a ZIP with `raw/`, `derived/`, and a `properties.json` manifest.
+
+A draft export includes its Private documents as well as Public ones. Keep that archive private unless you have reviewed everything it contains. It is a Memory workspace export, not an export of all account sessions, searches, and integrations.
+
+To reuse exported document files, unpack the archive and upload supported files to the appropriate layer, then review their Properties. There is no one-click ZIP restoration of the entire account or workspace manifest.
+
+## Proposals are separate from documents
+
+[Memory Loop](/memory/loop) shows **Review** proposals alongside Derived cards. Editing a proposal changes that proposal only. Accepting applies it to the selected draft; publication remains separate. Switching drafts or changing source documents can make a proposal out of date.
 
 ## Revisions, deletion, and sensitivity
 

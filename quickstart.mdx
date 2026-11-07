@@ -1,48 +1,70 @@
 ---
-title: "Get started with a real role"
-description: "Create a small accurate Career Memory, run Fast Check, and choose Manual or Auto interview preparation."
+title: "Get started with TLDT"
+description: "Go from sign-in and a CV to useful Memory, relevant vacancies, interview practice, reviewed improvements, and an optional public AI profile."
+keywords: ["getting started", "CV", "import", "pipeline", "Memory Loop"]
 icon: "bolt"
 sidebarTitle: "Get started"
 ---
 
-Start with one real vacancy or interview. Build only enough reviewed Career Memory to support an honest first check; add more evidence when the work exposes a real gap.
+Start with the career information you already have. This walkthrough takes you through one complete TLDT cycle: add evidence, find a role, test it, answer a gap, and improve the Memory you will reuse next time.
 
 <Steps>
-  <Step title="Create your account">
-    Open [TLDT](https://tldt.me) and choose **Sign up**. Use an email Magic Link/OTP or Google, then claim an available username.
+  <Step title="Sign in and upload your CV">
+    Open [TLDT](https://tldt.me), sign up or log in with Google or the email code/link offered on the page, then open **Profile**. Add your name and upload your CV under **Your CV**.
+
+    Review the prepared document and choose **Save CV** when you are ready to publish it. This makes the CV active and starts preparing your Search Profile. See [CV and Profile](/profile) for supported formats and how to replace an existing CV.
   </Step>
-  <Step title="Add the smallest useful evidence set">
-    Open **Memory → Import Guide**. Start with a CV and the project, role, or interview notes most relevant to the role you want to check. Upload only material you own and can verify.
+  <Step title="Bring in the career context your assistant already knows">
+    If you have discussed your work with ChatGPT or Claude, the quickest way to bootstrap richer Memory is **Import Guide** in the sidebar. Choose **Open in ChatGPT**, **Open in Claude**, or **Copy prompt**.
+
+    Run the prompt where the assistant has your professional context. Save the Markdown files it produces and upload them in the guide. They enter **Derived Memory** for review. This is a prompt-assisted export and upload, not an automatic account connection.
+
+    If the assistant has little useful context, start with your CV and your own project notes. You can fill specific gaps later.
   </Step>
-  <Step title="Review documents and Properties">
-    Check content, title, summary, topics, retrieval hints, visibility, sensitivity, and any special role. **Public** means eligible for publication; it does not mean live. Private documents stay in the owner workspace.
+  <Step title="Review and publish your initial Memory">
+    Open **Memory**. Check the imported text and Properties, including visibility, sensitivity, and the CV, Soul, Boundaries, and Voice roles. Correct unsupported claims and mark only reviewed documents **Public**.
+
+    Choose **Publish**, inspect the complete proposed version, and confirm. This creates and activates the new Memory version. Your **Public link** can remain off while you use it for private preparation.
   </Step>
-  <Step title="Publish and activate a Memory version">
-    Review the exact publication contents and warnings. Publish an immutable version, then activate it. Fast Check, Auto Simulate, Preview, and the public profile never read directly from an editable draft.
+  <Step title="Prepare Search Profile and find relevant jobs">
+    In **Profile → Search profile**, check that the profile is up to date. Use **Update search profile** if needed. The **Context** tab lets you choose which published Memory documents accompany the required CV.
+
+    Open **Job Search**, enter your query and filters, and turn on **Instant Fit** for personalized results. Read promising vacancies and bookmark those you want to revisit. You can also bring a vacancy you found elsewhere.
   </Step>
-  <Step title="Run Fast Check with the real role">
-    Open **Preparation → Fast Check**, paste one substantive vacancy link or description, review the extracted role, and run the diagnostic. Read strengths, partial coverage, real gaps, missing proof, and questions to validate.
+  <Step title="Run Fast Check on one promising vacancy">
+    From the vacancy detail choose **Fast Check**, or start one from **Preparation → Fast Check** using a saved vacancy, link, or pasted description. Review the role and run the check.
+
+    Read the strengths, partial fit, mismatches, missing proof, and questions to validate. The report helps you decide what to investigate or rehearse.
   </Step>
-  <Step title="Choose Manual or Auto Simulate">
-    Use **Manual** to rehearse your own answers. Use **Auto** to test what the pinned published AI profile can answer. Both modes use the same vacancy and produce a report you can review.
+  <Step title="Use Simulate to test your twin and practice">
+    Create a **Simulate** session for that role. **Auto** shows what the twin can answer from its pinned published Memory. Review the report and its **Memory Gaps** tab to see what needs more evidence.
+
+    Use **Manual** when you want to answer the interviewer yourself. You can practice without first running Auto; the two modes serve different purposes.
   </Step>
-  <Step title="Review, improve, and share selectively">
-    Correct Memory through the normal draft and publication flow. You may explicitly save a useful Chat or Simulate transcript to Raw Memory for review. Turn on the public link or create a saved share only when another person needs access.
+  <Step title="Answer the missing questions">
+    Open a gap in **Memory**. Under **Your answer**, type, paste text written elsewhere, or dictate with the microphone. Text saves automatically; wait for **Saved**.
+
+    If a gap includes your own Manual Simulate response, **Use this answer** copies that complete saved answer into the field. Auto answers cannot become your testimony through this action.
+  </Step>
+  <Step title="Review the Memory update">
+    Choose **Generate Memory**, select the saved answers, and run generation. Open the **Review** cards in Derived Memory, compare proposed updates, edit when needed, then accept or reject.
+
+    Acceptance changes the draft only. Use **Publish** to make the reviewed improvements active. Check Search Profile afterward, test the missing question again, and close the gap yourself when it is resolved.
+  </Step>
+  <Step title="Make your twin public when it is useful">
+    Test representative questions in **Preview**. In **Profile**, set your username, public copy, avatar, links, and visitor options, then enable the **Public link** and save.
+
+    Optionally [connect Cal.com](/settings/meetings) in **Settings** for visible meeting offers. Share your profile or a selected completed result with someone who needs it.
   </Step>
 </Steps>
 
-<Warning>
-  TLDT does not build a complete Career Memory automatically from arbitrary files. Generation creates reviewable drafts, and saving a session to Raw Memory never edits Derived Memory or publishes anything by itself.
-</Warning>
-
-## After the first role
+You do not need a complete career archive to start. Repeat the answer, review, and publication steps whenever a real vacancy or conversation reveals something worth preserving.
 
 <CardGroup cols={2}>
-  <Card title="Improve Career Memory" icon="layer-group" href="/memory/drafts-and-documents">
-    Add evidence that resolves a real unanswered question, then publish a new version.
+  <Card title="Import from ChatGPT or Claude" icon="file-import" href="/memory/import-guide">
+    Follow the export prompt, file-upload, and review steps.
   </Card>
-
-  <Card title="Test public representation" icon="eye" href="/owner-review/preview">
-    Ask representative recruiter questions before sharing your profile.
+  <Card title="Understand the improvement loop" icon="arrows-rotate" href="/memory/loop">
+    See exactly what generation, acceptance, and publication change.
   </Card>
 </CardGroup>

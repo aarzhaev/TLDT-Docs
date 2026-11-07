@@ -1,6 +1,6 @@
 ---
 title: "Share and revoke saved views"
-description: "Create and revoke visitor-safe snapshots of completed Chat, Fast Check, or Simulate resources."
+description: "Share a completed Chat, Fast Check, or Simulate result through a stable public snapshot, review what it exposes, and revoke its link when needed."
 icon: "share-nodes"
 sidebarTitle: "Saved shares"
 ---
@@ -12,10 +12,12 @@ A saved share gives another person a stable, visitor-safe view of one completed 
 The owner can create a saved view for:
 
 - a completed public Chat session;
-- a completed public Fast Check;
+- a completed owner or public Fast Check;
 - a completed Simulate report.
 
-The snapshot can include the vacancy, Public CV context, report, transcript, or guide needed to understand that resource. It never opens the owner workspace or exposes Private Memory, editable drafts, source paths, prompts, policy reasons, provider metadata, or tool traces.
+The snapshot can include the vacancy, Public CV context, report, transcript, or guide needed to understand that resource. It never opens the owner workspace or exposes Private Memory, editable drafts, internal source references, prompts, or tool traces. Owner-only Memory Gap cards and saved gap answers are not part of the share.
+
+Anyone with an active share link can view its snapshot. Review the actual transcript and report first, including personal details entered during the conversation.
 
 ## Create a share
 
@@ -27,7 +29,7 @@ The snapshot can include the vacancy, Public CV context, report, transcript, or 
     Review the resource and confirm that this is the snapshot you intend to expose.
   </Step>
   <Step title="Copy the generated link">
-    Share the link only after the UI confirms that the capability exists.
+    Share the link after creation succeeds, and open it to check the visitor view.
   </Step>
 </Steps>
 
@@ -39,7 +41,7 @@ The snapshot can include the vacancy, Public CV context, report, transcript, or 
 
 **Revoke** disables the public link but keeps the source resource. **Delete** removes the underlying session, report, or version and is a separate destructive action.
 
-A saved snapshot remains tied to the resource and Memory authority from which it was created. Activating newer Memory does not silently rewrite the share.
+A saved snapshot remains tied to the resource and Memory version from which it was created. Activating newer Memory does not silently rewrite the share. Saved shares have separate controls from the username page; review and revoke them separately when removing public access.
 
 <Note>
   A shared report is still a preparation or conversation aid. It does not prove identity, interest, availability, or a hiring outcome.

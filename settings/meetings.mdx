@@ -1,0 +1,49 @@
+---
+title: "Offer meetings through Cal.com"
+description: "Connect your Cal.com account, enable meeting offers, and let visitors choose a live available slot through the visible Public Chat booking form."
+keywords: ["Cal.com", "meetings", "calendar", "scheduling", "booking"]
+icon: "calendar"
+sidebarTitle: "Meetings"
+---
+
+Cal.com lets your public twin offer a meeting form during a relevant conversation. You control whether scheduling is enabled; the visitor chooses a specific available slot and confirms the booking.
+
+## Connect scheduling
+
+<Steps>
+  <Step title="Prepare your Cal.com account">
+    Review your calendar connections, timezone, availability, and meeting location in [Cal.com](https://cal.com). These settings determine which times can be offered.
+  </Step>
+  <Step title="Open Settings → Cal.com meetings">
+    Use **Create API key** to open Cal.com's key settings. Enter your key in TLDT's **Cal.com API key** field and choose **Connect**.
+  </Step>
+  <Step title="Check the connection details">
+    TLDT verifies the account and prepares or reuses its managed meeting event. Check the displayed Cal.com profile, timezone, event, duration, and location. Scheduling stays off until the connection and event are ready.
+  </Step>
+  <Step title="Enable meetings and save">
+    Turn on the scheduling switch and use **Save changes**. Enable your [Public link](/settings/public-link) when you are ready for visitors.
+  </Step>
+</Steps>
+
+The managed flow supports 20-, 40-, and 60-minute meetings. To stop new offers, disable scheduling and save, or disconnect the integration. Manage existing bookings in Cal.com; disconnecting TLDT is not a cancellation action.
+
+## What a visitor does
+
+1. Discusses a concrete reason to meet in Public Chat and agrees to proceed with scheduling.
+2. Opens the meeting form when it is offered.
+3. Chooses a duration and an available date and time, and supplies the requested name and email.
+4. Confirms the exact slot. TLDT checks availability and the request before creating the booking.
+
+The form collects contact details; a visitor does not need to put their email into Chat just to open it. An offer is not a booking. Treat the meeting as booked only after confirmation succeeds. There is no separate manual owner-approval step after a successful booking through this enabled flow.
+
+## A calendar link is a separate option
+
+You can add a Cal.com or other supported HTTPS scheduling link in **Profile → Social links**. That link sends visitors to the external destination. Adding a link does not connect the Cal.com integration or enable the in-chat booking form.
+
+TLDT's calendar connection is through Cal.com. Manage the underlying calendars in Cal.com rather than looking for a separate Google Calendar or Outlook connection in TLDT.
+
+## If scheduling is unavailable
+
+Check the integration's connected state, the enabled switch, and the timezone and availability in Cal.com. A missing form can also mean the conversation has not yet established a suitable meeting purpose. If a slot is no longer available, choose another offered slot.
+
+The twin cannot negotiate terms, declare your interest in a role, or promise availability beyond the checked booking flow. It cannot cancel or reschedule a meeting through conversation.

@@ -1,43 +1,52 @@
 ---
-title: "Public profile settings"
-description: "Control the username, visitor options, copy, models, and links for optional public representation."
+title: "Set up your public profile"
+description: "Choose your username, avatar, visitor options, public copy, and links, then enable the AI profile built from your reviewed published Memory."
+keywords: ["Public link", "Profile", "avatar", "visitor validation", "social links"]
 icon: "link"
 sidebarTitle: "Public profile settings"
 ---
 
-Public profile settings control the optional recruiter-facing representation built from your active published Career Memory.
+Manage your public representation in **Profile** from the owner sidebar. You can prepare its copy and settings while the Public link is off, then enable it after testing the active Memory in [Preview](/owner-review/preview).
 
-Open **Settings** from the owner sidebar after you have reviewed the profile through Owner Preview and, for a role-specific test, Auto Simulate.
+## Set the address and enable the link
 
-## Public profile address and status
+Choose an available username for your address, such as `tldt.me/your-username`. An active published Memory version is required before the public profile can be enabled.
 
-Choose the username that forms your address, for example `tldt.me/alex`. The profile can be enabled only when the username and an active published Memory version are ready.
+Turn on **Public link** and use **Save changes**. **Copy link** copies the address; **Public page** opens it for inspection. Turn the link off and save to stop public-profile access without deleting your Memory.
 
-Use **Copy link** to share the address or **Public page** to inspect it yourself.
+Publishing Memory and enabling the link are different actions. New Memory publications can change the active evidence behind an already-enabled profile, so review each publication carefully.
 
-## Visitor options
+## Add an avatar
 
-- **Visitor validation:** require a short visitor form before Chat continues, or leave the introduction optional.
-- **Allow interpretation:** permit clearly labeled interpretation and general knowledge in addition to grounded published Memory.
-- **Public CV:** show or hide the owner-approved CV panel.
-- **Starter prompts:** edit the question chips above the public Chat input.
+Upload a JPEG, PNG, or WebP image up to 2 MB. Adjust the circular crop and zoom, then upload. Use **Show avatar** and **Save changes** to control whether it appears on the public profile. You can replace or remove it later.
 
-Disabling interpretation keeps personal answers within published Memory and disclosure policy. No setting exposes Private Memory or editable drafts.
+The public avatar is separate from the account photo shown in the sidebar account menu.
 
-## Public copy and languages
+## Choose visitor options
 
-Edit the header, welcome title, description, and starter prompts separately for English and Russian. The public language switch shows available localized copy.
+| Option | Effect |
+| --- | --- |
+| **Visitor validation** | Requires a visitor introduction before Chat continues; when disabled, an introduction can remain optional. |
+| **Allow interpretation** | Permits labeled interpretations and general knowledge alongside answers grounded in published Memory. |
+| **Public CV** | Shows or hides the CV panel. Hiding the panel does not remove the CV from published Memory. |
+| **Starter prompts** | Supplies suggested questions for visitors to begin a conversation. |
 
-Describe what a visitor can ask and what the profile can support. Do not imply that the AI can accept roles, negotiate, promise interest or availability, or make decisions for you.
+No option gives visitors access to Private documents or drafts. Interpretation cannot turn an inference into a claim about your personal history.
 
-## Models and routing
+## Write the welcome copy
 
-When BYOK is enabled, manage the visible model allowlist and choose price- or throughput-oriented provider routing. Visitors see only the effective public model list. Provider details and credentials remain owner-only.
+Edit the public **Header**, **Chat**, and **Fast Check** copy in their respective tabs. English and Russian variants let you set the titles, descriptions, and starter prompts for each language.
 
-## Social links and scheduling
+Tell visitors whose profile they are exploring, what they can ask, and what the answer can help them understand. Avoid implying that the twin can accept a role, negotiate, or make decisions for you. Save the changes and inspect the public page in the languages you use.
 
-Add supported HTTPS social links and, when configured, a Cal.com destination. Scheduling remains a visible, bounded flow; the conversational AI cannot create a hidden commitment.
+## Add professional links
 
-<Warning>
-  Enabling the public profile is a publication decision. Test the active version first and confirm that every public document, special role, language, and link matches your intent.
-</Warning>
+Use **Social links** for LinkedIn, Telegram, GitHub, X, a website, Cal.com, Instagram, or another supported HTTPS destination. Check the URL and label before saving.
+
+A Cal.com or other calendar link opens an external scheduling page. To let Public Chat offer an embedded booking form, separately [connect Cal.com meetings](/settings/meetings) in **Settings**.
+
+## Models and integrations
+
+**Settings** contains Cal.com and optional bring-your-own-key model controls. When using your own model configuration, choose which models visitors can see and the provider-routing preference there. See [Integrations and models](/settings/integrations).
+
+Use [saved shares](/sharing) when you want to expose one completed result instead of ongoing access to the active twin. Review and revoke those links separately.

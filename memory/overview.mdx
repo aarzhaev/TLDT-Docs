@@ -1,67 +1,55 @@
 ---
 title: "Career Memory"
-description: "Build reviewed professional context that can be reused across role checks, interview preparation, and representation."
+description: "Keep the evidence behind your CV, use it across career workflows, and improve it through reviewed answers without exposing private drafts."
+keywords: ["Career Memory", "Raw", "Derived", "drafts", "Memory Gaps"]
 icon: "database"
 sidebarTitle: "Career Memory"
 ---
 
-Career Memory is the durable asset behind TLDT. It holds reviewed professional context that can be reused across real vacancies, interview preparation, owner testing, and optional recruiter-facing representation.
+Career Memory preserves the context behind your CV: projects, decisions, responsibilities, outcomes, constraints, working style, and examples. You can reuse that evidence across job searches, interviews, and an optional public twin instead of rebuilding your story each time.
 
-A résumé can summarize roles and outcomes. Career Memory can also preserve the context needed to explain them: decisions, constraints, trade-offs, scope, dates, metrics, uncertainty, working style, and boundaries.
+## Start with what you already have
 
-## What makes Memory trustworthy
-
-- **Owner supplied:** personal facts begin with evidence the owner chooses to add.
-- **Reviewable:** content and Properties stay editable in a draft before publication.
-- **Separated by state:** Raw evidence, Derived summaries, drafts, and published versions do different jobs.
-- **Explicitly published:** runtime workflows use only an immutable version the owner approved.
-- **Reusable:** the same approved context can support Fast Check, Auto Simulate, Preview, Public Chat, and Public CV.
+Add your [CV in Profile](/profile). If ChatGPT or Claude already has useful career context, follow [Import Guide](/memory/import-guide) to produce reviewable Memory files. You can also upload source documents or write your own notes.
 
 ## The Memory workspace
 
-Open **Memory** from the owner sidebar:
+Open **Memory** from the sidebar. Its three areas work together:
 
-- **Raw** keeps original owner-supplied evidence.
-- **Derived** keeps concise operational explanations linked to Raw sources.
-- **Properties** describe retrieval, visibility, sensitivity, and special roles.
-- **Drafts** separate editable workspaces from live representation.
-- **Versions** hold immutable publications and let you activate an approved version.
-
-<CardGroup cols={2}>
-  <Card title="Raw Memory" icon="file-lines">
-    Use it for CVs, notes, transcripts, project records, dates, metrics, and original wording.
-  </Card>
-
-  <Card title="Derived Memory" icon="layer-group">
-    Use it for focused project context, role explanations, evidence summaries, and representative guidance.
-  </Card>
-</CardGroup>
-
-## Reuse across workflows
-
-| Workflow | How it uses Career Memory |
+| Area | What you do there |
 | --- | --- |
-| Fast Check | Maps published evidence to one vacancy and exposes gaps or missing proof. |
-| Auto Simulate | Answers interview questions from the version pinned to the session. |
-| Manual Simulate | Does not answer for you, but the session can reveal evidence worth preserving. |
-| Owner Preview | Tests how the active published profile handles likely public questions. |
-| Public profile | Answers visitors from the active published version only. |
+| **Memory Gaps** | Review missing-evidence questions and save your own answers in text or by voice. |
+| **Raw Memory** | Keep original or extracted evidence: notes, documents, transcripts, and saved answers. |
+| **Derived Memory** | Maintain useful career explanations and review proposed changes from Memory Loop. |
 
-A session never silently rewrites Memory. You may save supported session material to Raw Memory explicitly, then review it through the normal draft and publication flow.
+On smaller screens, select the area you want to work in. Opening a document lets you read and edit its full content and **Properties**. Draft and version controls separate the workspace you are editing from the published snapshot used by the twin.
+
+## Two ways to build Derived Memory
+
+- **From existing sources:** upload reviewed `.md` files from Import Guide, create a card yourself, or [generate a candidate from selected Raw documents](/memory/generate-derived).
+- **From new answers:** answer a gap, choose **Generate Memory**, and [review the proposed additions or updates](/memory/loop).
+
+Both paths require your review. Ordinary Raw-to-Derived generation starts with a Private candidate. Memory Loop's **Accept for publication** creates a Public draft card, while updates preserve the target's visibility. Neither generation nor acceptance publishes a version.
 
 ## Special roles
 
-Each draft can have at most one Public document for each special role:
+A draft can have at most one Public document for each special role:
 
 | Role | Purpose |
 | --- | --- |
-| CV | Public career summary and screening context. |
-| Soul | Identity and stance for representation. |
+| CV | Your reviewed career summary, also used by Search Profile. |
+| Soul | Identity and stance for how the twin represents you. |
 | Boundaries | Disclosure limits and topics that need care. |
-| Voice | Grounded speaking style and representative language. |
+| Voice | Speaking style and representative professional language. |
 
-A special role guides representation; it does not become evidence of work history. The document still follows Public/Private, sensitivity, review, and publication rules.
+Roles are selected in Properties. A filename alone does not assign a role. Soul, Boundaries, and Voice guide representation; they do not establish work experience.
 
-<Tip>
-  A useful Memory preserves the uncomfortable edges: team vs. individual ownership, approximate vs. exact metrics, missing dates, negative results, and limits. Honest context improves both preparation and representation.
-</Tip>
+## Review, publish, reuse
+
+**Public** on a draft card means eligible for the next publication. **Private** keeps a document out of published runtime Memory. Choose [Publish](/memory/publish) to review the full Public draft and make a new version active.
+
+Search Profile uses the published CV and selected Derived context. Fast Check, Preview, Public Chat, and Auto Simulate use published evidence under their own workflow rules. Existing sessions keep their original Memory version.
+
+When a real question exposes missing detail, return to the gap, answer it, review the proposed change, and publish. Keep the claim precise: your role rather than the whole team's work, the actual result rather than a stronger estimate, and uncertainty where it belongs.
+
+Use **Export** to download the selected draft or version. See [Drafts and documents](/memory/drafts-and-documents) for workspace management and backups.

@@ -1,19 +1,22 @@
 ---
 title: "Generate Derived Memory"
-description: "Turn selected Raw evidence into a Private, reviewable Derived candidate with source provenance."
+description: "Generate a Private Derived candidate from selected Raw documents, inspect its sources and claims, and review it before making it eligible for publication."
+keywords: ["Derived Memory", "Raw Memory", "generation", "presets"]
 icon: "wand-magic-sparkles"
 sidebarTitle: "Generate Derived Memory"
 ---
 
-Derived generation turns selected Raw evidence into a concise, reviewable Markdown candidate. Use it to organize accurate source material for retrieval and conversation—not to create missing experience.
+Derived generation turns selected Raw evidence into a reviewable Markdown candidate. Use it to organize accurate source material for retrieval and conversation, keeping facts and limitations intact.
 
-Every generated candidate starts Private and keeps source provenance. It becomes usable by runtime workflows only after you review, save, mark it Public, publish a version, and activate that version.
+Every candidate from this flow starts Private and keeps links to its sources. It becomes usable by runtime workflows after you review, save, mark it Public, and publish the version. Memory's Publish action also activates that version.
+
+For saved answers to Memory Gaps, use the separate [Memory Loop](/memory/loop) flow. For ready-made Markdown files from ChatGPT or Claude, use [Import Guide](/memory/import-guide).
 
 ## Generate a candidate
 
 <Steps>
   <Step title="Select up to 20 Raw documents">
-    Choose only the sources needed for one topic. Focused selections make factual review easier.
+    Open **Generate Derived Memory** from the Derived column and choose only the sources needed for one topic. Focused selections make factual review easier.
   </Step>
   <Step title="Choose a preset or custom instruction">
     Ask for a specific artifact, such as project context, a role summary, or an explanation of a decision and its constraints.
@@ -40,7 +43,7 @@ Generation does not:
 - silently choose a different model;
 - silently truncate selected sources;
 - reconcile contradictions across your entire Memory;
-- learn automatically from Fast Check or Simulate.
+- run the separate gap-answer Memory Loop automatically.
 
 If the selected context is too large, TLDT returns a context-overflow error rather than silently dropping source material.
 

@@ -1,47 +1,53 @@
 ---
-title: "Add evidence to Raw Memory"
-description: "Bring owner-supplied sources into Raw Memory without turning them into unreviewed public claims."
+title: "Import Memory from ChatGPT or Claude"
+description: "Use the Import Guide to export existing professional context as Markdown, upload it to Derived Memory, and review it before publication."
+keywords: ["Import Guide", "ChatGPT", "Claude", "Markdown", "career evidence"]
 icon: "file-import"
-sidebarTitle: "Add evidence"
+sidebarTitle: "Import Memory"
 ---
 
-Start from the real role or conversation you need to prepare for. Add the smallest set of sources that can support an honest first check; expand the Memory when a concrete question exposes missing proof.
+If ChatGPT or Claude already knows your professional history, use that context to bootstrap TLDT. **Import Guide** provides a ready-made export prompt and an upload area for the resulting Memory files. You still review the facts and decide what to publish.
 
-## What to add first
-
-- your current CV or résumé;
-- project notes with dates, outcomes, constraints, and your exact role;
-- work-history notes that explain scope or decisions beyond a résumé bullet;
-- interview transcripts or work samples you own;
-- a short statement of preferred roles, working style, and boundaries;
-- supporting material for a project you expect to discuss.
-
-Keep unrelated topics in separate files. Focused sources are easier to review, retrieve, and correct.
-
-## Add sources to Raw Memory
+## Export the context your assistant can access
 
 <Steps>
-  <Step title="Choose a draft">
-    Select the workspace you want to update. Create an empty draft, copy another draft, or copy an immutable published version.
+  <Step title="Open Import Guide in TLDT">
+    Choose **Open in ChatGPT**, **Open in Claude**, or **Copy prompt**. The assistant buttons open a chat with the prompt prefilled; Copy prompt lets you paste the complete instructions into a conversation or project with useful career context.
   </Step>
-  <Step title="Upload supported files">
-    Add Markdown or text files through the Raw column. TLDT stores the content separately from its server-owned Properties.
+  <Step title="Run the prompt and inspect the output">
+    Ask the assistant to use only the professional information actually available to it. The prompt requests focused career files and three representation files: `soul.md`, `boundaries.md`, and `voice.md`.
+
+    Check roles, dates, responsibilities, metrics, ownership, and limitations. Remove invented details and material you do not want retained. The assistant's output is a draft, not independent verification of your history.
   </Step>
-  <Step title="Review Properties analysis">
-    TLDT can propose a title, summary, topics, and retrieval hint with the selected model. Treat every proposal as a draft.
+  <Step title="Save the Markdown files">
+    Download each `.md` file if the assistant can create files. Otherwise, save each complete file block under the filename it provides, keeping the Properties block at the top.
+
+    After the main export, the prompt asks the assistant to offer deeper files where it has supporting evidence. Request only the additional cases or examples you want.
   </Step>
-  <Step title="Set visibility and sensitivity">
-    Choose **Public** only when the source is eligible for the next publication. Keep material **Private** when it should remain in the owner workspace.
+  <Step title="Upload into Derived Memory">
+    Drop the `.md` files into Import Guide, or use **Upload** in Memory's **Derived** column. Upload up to 20 files at a time, with a 2 MB limit per file and 4 MB per batch. Repeat for the remaining files.
   </Step>
-  <Step title="Check the evidence">
-    Confirm dates, actors, scope, metrics, denominators, limitations, and source ownership before relying on the document.
+  <Step title="Review and publish deliberately">
+    Open the imported cards in **Memory**. Review their text, visibility, sensitivity, and special roles. The guide asks the assistant to mark files Private. Check those Properties yourself, then mark the documents you approve Public and [publish the reviewed version](/memory/publish).
   </Step>
 </Steps>
 
-## What import does not do
+This workflow does not import a ChatGPT or Claude account archive, connect the accounts, or continuously synchronize their memory. A new assistant chat may not have access to all your older conversations. If relevant context is missing, provide sources you can verify or use a conversation where it is available.
 
-TLDT does not crawl arbitrary accounts, automatically build a complete career history, decide which claims are true, or publish uploaded material. Adding a source creates reviewable Raw Memory; it does not make the source part of the active public representation.
+## If you are starting with documents
 
-<Warning>
-  Never use generation to fill an evidence gap. If a source does not support a claim, keep the gap visible or add a source you own and can review.
-</Warning>
+Upload your [CV in Profile](/profile). Add project notes, transcripts, work samples, or other supporting evidence through **Memory → Raw → Upload**, or create a Raw note directly.
+
+| Destination | Accepted files |
+| --- | --- |
+| Profile CV upload | PDF, DOC, DOCX, ODT, RTF, HTML, MD, TXT; one file up to 2 MB. |
+| Raw Memory | PDF, DOC, DOCX, ODT, RTF, HTML, HTM, MD, TXT; up to 20 files, 2 MB each and 4 MB per batch. |
+| Derived Memory and Import Guide | Markdown `.md` files; the same Memory batch limits apply. |
+
+Rich-document uploads are converted to text. Review the extracted content, especially tables, dates, and numbers. A parsing or Properties error needs review or retry; uploading does not establish that the content is accurate or live.
+
+Use [Derived generation](/memory/generate-derived) to organize selected Raw sources. Keep unrelated topics separate and retain source material you need for later fact checking.
+
+<Tip>
+  A CV and a few accurate examples are enough to begin. Use real vacancies and [Memory Gaps](/memory/gaps) to identify the next useful question instead of trying to reconstruct your entire career at once.
+</Tip>

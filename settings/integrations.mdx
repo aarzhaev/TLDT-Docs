@@ -1,44 +1,50 @@
 ---
 title: "Integrations and models"
-description: "Understand the optional services behind model generation, vacancy context, scheduling, speech input, and notifications."
+description: "Use hosted model access or your own keys, understand document parsing and speech input, and distinguish browser assistance from remote connectors."
+keywords: ["integrations", "BYOK", "OpenRouter", "Firecrawl", "speech", "WebMCP"]
 icon: "plug"
 ---
 
-Integrations support generation, vacancy context, scheduling, speech input, and notifications. They do not change the Career Memory authority model: personal facts still require owner-supplied evidence, reviewed publication, and Profile-scoped access.
+**Settings** contains optional model and service connections for your Profile. You can use TLDT's available hosted configuration or enable **BYOK** (bring your own key) for supported providers. Integration settings do not change which Memory you have approved for publication.
 
-Credentials stay server-side. They do not appear in prompts, transcripts, public responses, or visitor-visible provider details.
+## Hosted access and BYOK
 
-## OpenRouter
+With BYOK off, supported actions use TLDT's hosted provider configuration and available models. You do not need to supply your own keys to begin when hosted services are available.
 
-OpenRouter provides model generation for Public Chat, Fast Check, Simulate, Properties analysis, and Derived generation.
+With BYOK on, connect the keys required for your workflows:
 
-- **Platform mode** uses the hosted TLDT Lite model.
-- **BYOK mode** uses the OpenRouter credential and saved model list connected to the owner's Profile.
-- BYOK does not silently fall back to platform credentials when the owner key is missing or fails.
-- Public visitors can select only models the owner marks visible.
+- **OpenRouter** for model generation, including Chat, preparation, and Memory actions.
+- **Firecrawl** for supported document conversion, vacancy-link extraction, and research tasks that use it.
+- **Perplexity** for supported external research.
 
-Provider failure returns an explicit error for the action that needs generation. TLDT does not replace it with a template answer that could look grounded.
+Use the provider card's key link, enter the key, and connect it. Check the connection status and any displayed balance. Review the model list, public visibility choices, and routing preference, then save changes where offered. **Low Price** and **High Throughput** express a routing preference, not a guaranteed cost or response time.
 
-## Firecrawl and Perplexity
+BYOK uses your connected credentials and does not silently fall back to TLDT's hosted keys when one is missing or fails. Provider usage can incur charges on your account. Disconnect or replace a key through its provider card.
 
-These services support bounded vacancy extraction and public research when the workflow allows it. Research can add role or company context; it cannot prove the owner's history.
+Credentials stay out of public answers and transcripts. Paste a key only into its dedicated connection field, never into Memory or a chat message.
 
-Unsafe URLs are rejected. Missing or failed research reduces available external context instead of creating a personal fact.
+## Documents, vacancies, and research
 
-## Cal.com
+Document conversion makes supported CV and Raw uploads readable as text. Check the extracted result before publishing it. Vacancy extraction and research help supply role or company context; they do not verify your career history.
 
-Cal.com supports an optional visible meeting flow. The conversation must have a concrete purpose, and the visitor must give explicit consent. Availability, exact slot selection, and policy review happen before booking.
+[Job Search](/jobs/search) reads a vacancy catalogue. Saving a role keeps a vacancy snapshot; it does not add the listing to your career evidence or submit an application.
 
-TLDT cannot promise that the owner is interested, available, accepting a role, or agreeing to any terms outside the visible scheduling flow.
+If a vacancy URL cannot be read, paste its description into Fast Check or Simulate. If conversion fails, use an accurate Markdown or text version where supported.
 
-## Soniox
+## Meetings
 
-Soniox turns a short voice recording into editable text. The text returns to the composer and never sends automatically. TLDT does not provide a real-time interview copilot or autonomous voice representative.
+[Cal.com meetings](/settings/meetings) has its own connection and enabled switch in Settings. It lets the twin offer a visible booking form with live availability. Adding a calendar URL under Profile's social links is a separate action.
 
-## Loops and Telegram
+## Voice input
 
-Loops supports hosted authentication email and best-effort owner audience sync. Telegram can deliver configured access-request or owner escalation notifications. These services are optional and do not grant access to Memory or secrets.
+The microphone uses speech-to-text to return a recording as editable text. Review the transcript and send it yourself in Chat or Manual Simulate. In a Memory Gap, the text is appended to **Your answer** and saved through that field's normal autosave.
 
-<Warning>
-  Integration settings are Profile-scoped. A missing or failed integration never permits TLDT to switch to another owner's credential, Memory, or tenant context.
-</Warning>
+Voice input does not automatically submit a message, generate Memory, or publish a change. Recording and transcription failures leave the existing text intact. It is not a realtime voice interviewer or a general audio-file import.
+
+## Browser assistants and documentation access
+
+In a compatible browser, TLDT exposes page-scoped **WebMCP** actions. On a public profile, an assistant can use the currently open profile's permitted capabilities. In the authenticated owner workspace, supported actions remain bound to your account, and sensitive operations use visible confirmation or the ordinary UI.
+
+This is not a remote account connector that you can install in ChatGPT or Claude to continuously read and update Memory. Use [Import Guide](/memory/import-guide) for the current assistant-to-TLDT export workflow. Memory Loop answer authoring and proposal review stay in the visible TLDT interface.
+
+The documentation site's contextual menu can also connect assistants to the documentation search MCP. That connection searches these help pages; it does not grant access to your TLDT account or career Memory.
